@@ -75,7 +75,8 @@ export function fastestChargedMoves(charged_moves=[]){
     let index=temp.indexOf(Math.max(...temp))
     let obj= {
         name:charged_moves[index].name,
-        energy:Math.max(...temp)
+        energy:Math.max(...temp),
+        power: charged_moves[index].power
     }
     return obj   
    } else {
@@ -95,6 +96,7 @@ export function campeonesVelocidad() {
             forma:"",
             ataque_rapido:"",
             ataque_cargado:"",
+            poder_ataque_cargado:0,
             numTurnos:10,
             tiempo:10
         }
@@ -116,10 +118,11 @@ export function campeonesVelocidad() {
                 pok.ataque_cargado=fastestCharged.name
                 pok.numTurnos=Math.trunc((-fastestCharged.energy/bestToCharge.energy)+1)
                 pok.tiempo=pok.numTurnos*bestToCharge.duration/1000
+                pok.power=fastestCharged.power
                 //console.log(element.id);
             })
 
-            if (pok.numTurnos<4&&pok.forma!=="Shadow") {
+            if (pok.forma!=="Shadow"&&pok.tiempo<3.3) {
                 campeones.push(pok)
             }
         }

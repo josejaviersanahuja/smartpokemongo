@@ -7,7 +7,7 @@ export default function DetallesAtaques({pokemon, index}) {
     const charged_moves=detallesChargedMovesPVP(pokemon.ataques[index].charged_moves)
     const bestToCharge=bestFastMoveToCharge(fast_moves)
     const fastestCharged=fastestChargedMoves(charged_moves)
-
+    //console.log(fastestCharged);
     return (
         <>
           <thead>

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*trabajemos desde el inicio con funciones*/
+body {
+  font-weight: 700;
+}
+
+/*como el map-get es molesto. hagamos una funcion para abreviarlo*/
+/*como muchas veces repetimos códigos en css, digamos para realizar un display y centrar los items, content etc podemos usar esto... */
+/*usaremos la funcion en &_paragraph y _paragraph
+También unsaremos el dispFlexCenter
+*/
+.main {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.main_paragragh {
+  font-weight: 500;
+}
+
+.main .main__paragraph {
+  font-weight: 400;
+}
+
+.main .main__paragraph:hover {
+  color: gray;
+}
+/*# sourceMappingURL=main.css.map */

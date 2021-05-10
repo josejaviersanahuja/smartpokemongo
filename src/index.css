@@ -20,12 +20,14 @@ code {
   background-image: url(./images/background.jpg);
   background-position: center;
   background-size:125%; 
+  overflow-x: hidden;
 }
 
 header {
-  background-image:url(./images/logo.jpg);
+  background-image:url(./images/headerbackground.png);
   background-repeat: no-repeat;
   background-position: center;
+  height: 15rem;
 }
 
 ol {
@@ -42,7 +44,7 @@ footer {
 }
 table {
   width: 100%;
-  padding: 0 10rem 0 0;
+  padding: 0 5rem 0 0;
 }
 
 select {
@@ -59,7 +61,16 @@ option:hover {
 
 button {
   margin: 0 2rem;
+  background: rgba(255,255,255,0.2);
+  color: aliceblue;
+  transition: all, 200ms ease-in-out 100ms;
 }
+button:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 a {
   color: lightblue;
   margin: 0 2rem;
@@ -67,4 +78,22 @@ a {
 
 span {
   margin: 0 3rem;
+}
+
+nav {
+  height: 6rem;
+  background: rgba(255, 255, 255, 0.0);
+  justify-content: space-around;
+  align-content: space-around;
+  padding: 1rem;
+}
+
+nav span{
+  margin: 1rem 4rem;
+ }
+img{
+  transition: all, 300ms ease-in-out 100ms;
+}
+img:hover{
+  transform: scale(1.2);
 }

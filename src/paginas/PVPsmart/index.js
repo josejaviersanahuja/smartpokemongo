@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-
-import { Link } from 'react-router-dom'
 import allpokemons_ataques from '../../data/pokemons_ataques.json'
 import allpokemons from '../../data/pokemons.json'
 //import allataques_rapidos from '../../data/ataques_rapidos_PVP.json'
@@ -28,8 +26,7 @@ export default function PVPsmart() {
         <>
             <section>
                 <h2>Aquí Analizamos los ataques de cada pokemon</h2>
-                <Link to="/">Back to pokemons</Link>
-            </section>
+              </section>
             <BusquedaForm listPokemonsYataques={listPokemonsYataques} setpokemon={setpokemon}  />
             <DetallesPokemon pokemon={pokemon} />
         </>

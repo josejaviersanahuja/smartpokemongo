@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import pokemons from '../../data/pokemons.json'
-import {Link } from "react-router-dom";
 export default function Home() {
   
   const [pag, setpag] = useState(0)
@@ -16,8 +15,6 @@ export default function Home() {
     <>
       <section>
         <h2>Listado de Pokemos</h2>
-        <Link to="/PVP">PVPsmart</Link>
-        <Link to="/CampeonesPVP">Campeones en velocidad de ataques en PVP</Link>
       </section>
       {pag!==0? <button onClick={()=>setpag(prev=>prev-1)}>Página Previa</button>: null} 
       <button onClick={()=>setpag(prev=>prev+1)}>Siguiente Página</button>

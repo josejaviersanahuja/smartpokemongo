@@ -1,0 +1,38 @@
+@import './resets';
+@import './variables';
+/*trabajemos desde el inicio con funciones*/
+
+
+body {
+    font-weight: map-get($font-weights,bold);
+}
+/*como el map-get es molesto. hagamos una funcion para abreviarlo*/
+@function f_weight($name) {
+    @return map-get($font-weights, $name)
+};
+/*como muchas veces repetimos códigos en css, digamos para realizar un display y centrar los items, content etc podemos usar esto... */
+@mixin dispFlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+};
+/*usaremos la funcion en &_paragraph y #{&}_paragraph
+También unsaremos el dispFlexCenter
+*/
+.main {
+    width: 80%;
+    margin:0 auto;
+    @include dispFlexCenter;
+
+    &_paragragh {
+        font-weight: f_weight(medium);
+    }
+
+    #{&}__paragraph{
+        font-weight: f_weight(regular) ;
+        &:hover {
+            color: gray;
+        }
+    }
+}
