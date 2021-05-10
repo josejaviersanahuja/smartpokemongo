@@ -5,9 +5,66 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background: #101010;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  background-image: url(./images/background.jpg);
+  background-position: center;
+  background-size:125%; 
+}
+
+header {
+  background-image:url(./images/logo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr ));
+  gap: 0.5rem;
+  margin: 0 2rem 0 4rem;
+  list-style: none;
+  text-align: left;
+}
+
+footer {
+  margin: 2rem;
+}
+table {
+  width: 100%;
+  padding: 0 10rem 0 0;
+}
+
+select {
+  transform: translate(-1.9rem,-1.6rem);
+  
+  background: rgba(255,255,255,0.2);
+  width: 11rem;
+ 
+}
+
+option:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+button {
+  margin: 0 2rem;
+}
+a {
+  color: lightblue;
+  margin: 0 2rem;
+}
+
+span {
+  margin: 0 3rem;
 }
