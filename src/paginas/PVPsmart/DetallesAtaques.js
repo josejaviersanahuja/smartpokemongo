@@ -2,9 +2,15 @@ import React from 'react'
 import {detallesFastMovesPVP, detallesChargedMovesPVP, bestFastMoveToCharge, fastestChargedMoves} from '../../services/servicios'
 
 export default function DetallesAtaques({pokemon, index}) {
-
-    const fast_moves=detallesFastMovesPVP(pokemon.ataques[index].fast_moves)
-    const charged_moves=detallesChargedMovesPVP(pokemon.ataques[index].charged_moves)
+    let fast_moves=[]
+    if (pokemon.ataques[index].fast_moves.length) {
+        fast_moves=detallesFastMovesPVP(pokemon.ataques[index].fast_moves)
+    } 
+    let charged_moves=[]
+    if (pokemon.ataques[index].charged_moves) {
+        charged_moves=detallesChargedMovesPVP(pokemon.ataques[index].charged_moves)
+        
+    } 
     const bestToCharge=bestFastMoveToCharge(fast_moves)
     const fastestCharged=fastestChargedMoves(charged_moves)
     //console.log(fastestCharged);
