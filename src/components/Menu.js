@@ -5,9 +5,8 @@ export default function Menu() {
     return (
         <div className="desplegable">
             <ul>
-                {/* <li><Link to="/PVP">PVPsmart</Link></li>
-                <li><Link to="/CampeonesPVP">Campeones en velocidad de ataques en PVP</Link></li> */}
-                <li><Link to="/apicall">test API</Link></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/page/0">Lista de Pokemones</Link></li>
             </ul>
         </div>
     )

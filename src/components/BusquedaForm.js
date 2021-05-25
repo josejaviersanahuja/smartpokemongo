@@ -30,14 +30,17 @@ export default function BusquedaForm({listPokemonsYataques, setpokemon}) {
     return (
         <>
           <form id="buscar_pokemon " onSubmit={handleSubmit}>
+              <fieldset>
+              <legend>Busca por nombre</legend>
                 <input
                     type="search"
                     placeholder="escribe el pokemon"
                     onChange={handleChange}
                     value={keyword}
+                    list="pokemons"
                 />
-                <input type="submit" value="Buscar"/>
-               <p></p> {arrayBusqueda.length !== 0 ? <select form="buscar_pokemon" name="filtrodebusqueda" size="3" >
+                <input type="submit" value="Buscar" />
+               <p></p> {arrayBusqueda.length !== 0 ? <datalist id="pokemons" form="buscar_pokemon" name="filtrodebusqueda" >
                 
                         {arrayBusqueda.map(e =>
                             <option
@@ -48,7 +51,8 @@ export default function BusquedaForm({listPokemonsYataques, setpokemon}) {
                             </option>
                         ) }
                     
-                </select>: null}
+                </datalist>: null}
+                </fieldset>
             </form>
         </>
     )

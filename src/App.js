@@ -1,13 +1,12 @@
-import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useParams } from "react-router-dom";
 import './App.css';
 import Menu from "./components/Menu";
-import CampeonesPVP from "./paginas/CampeonesPVP";
-import Home from "./paginas/Home";
-import PVPsmart from "./paginas/PVPsmart";
-import homeimg from './images/home.png'
-import pvpimg from'./images/pvp.png'
-import statsimg from './images/stats.png'
-import Apicall from "./paginas/Apicall";
+import Page from "./paginas/Page";
+import Details from './paginas/Details'
+import React, {useEffect, useState} from 'react'
+import getAPI from './services/getAPI'
+import Busqueda from "./components/Busqueda";
+import Home from './paginas/Home'
 
 function App() {
   return (
@@ -17,16 +16,14 @@ function App() {
         <Menu/>
       </header>
       <nav>
-        <span><Link to="/"><img src={homeimg} alt="home" width='125' height='100' /></Link></span>
-        <span><Link to="/CampeonesPVP"><img src={pvpimg} alt="campeones" width='125' height='100'/></Link></span>
-        <span><Link to="/PVP"><img src={statsimg} alt="stats" width='125' height='100'/></Link></span>
+        <Busqueda/>
       </nav>
       <Switch>
       
           <Route exact path="/" ><Home /></Route>
-          <Route path="/PVP" ><PVPsmart /></Route>
-          <Route path="/CampeonesPVP" ><CampeonesPVP /></Route>
-          <Route path="/apicall" ><Apicall/></Route>
+          <Route path="/page/:pag" component={Page}/>
+          <Route path="/pokemon/:id" children={<Child/>}></Route>
+          {/* montar pagina 404 */}
         </Switch>
       <footer>
         Espero que te guste José Manuel
@@ -36,3 +33,21 @@ function App() {
 }
 
 export default App;
+
+function Child() {
+  let {id}=useParams()
+  const [datapok, setdatapok] = useState([])
+    const [loading, setloading] = useState(true)
+    useEffect(() => {
+        getAPI({id:id})
+            .then(pok => {
+                setdatapok(pok)
+                setloading(false)
+            })
+        
+        return () => {
+            setloading(true)
+        }
+    }, [id])
+  return <Details id={id} datapok={datapok} loading={loading}/>
+}

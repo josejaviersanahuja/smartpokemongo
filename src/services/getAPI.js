@@ -1,7 +1,7 @@
 export default function getAPI({id}) {
   
   
-    const apiURL=`http://localhost:3002/api/pokemon/${id}`
+    const apiURL=`https://dry-spire-72214.herokuapp.com/api/pokemon/${id}`
     
       return fetch(apiURL)
                 .then(res=> res.json()
