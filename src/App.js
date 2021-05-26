@@ -10,6 +10,7 @@ import Home from './paginas/Home'
 import About from './paginas/About'
 import LanguageContext from './context/LanguageContext'
 import AreYouLost from './paginas/AreYouLost'
+//q2import Spinner from "./components/Spinner";
 
 function App() {
   const {language, setlanguage}= useContext(LanguageContext)
@@ -33,6 +34,7 @@ function App() {
         </Switch>
       <footer>
         Espero que te guste José Manuel
+        
       </footer>
       
     </>
