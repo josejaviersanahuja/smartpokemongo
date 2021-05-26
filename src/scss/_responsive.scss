@@ -1,0 +1,27 @@
+/*Por defecto, los estilos se hacen para los móvildes width <400px*/
+/*Ahora si el movil es de gama media tamaño s 400<width<768*/
+@include media-s {
+    .spinner{
+        margin:1rem auto;
+    }
+}
+
+/*tamaño m 768<width<1080*/
+
+@include media-m {
+    .spinner{
+        margin:1rem auto;
+    }
+}
+/*tamaño l 1080<width<1500*/
+@include media-l {
+    .spinner{
+        margin:1rem auto;
+    }
+}
+/*tamaño xl 1500<width*/
+@include media-xl {
+    .spinner{
+        margin:1rem auto;
+    }
+}

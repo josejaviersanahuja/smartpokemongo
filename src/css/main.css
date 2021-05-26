@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*como variables es lo primero que importamos... inicializamos todos los selectores */
 * {
   -webkit-box-sizing: border-box;
@@ -17,6 +18,155 @@
 }
 
 /*Creando funciones*/
+/*Creando las funciones de responsiveness*/
+.spinner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 1rem auto;
+}
+
+.spinner__text {
+  position: relative;
+  top: 20%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  z-index: 1;
+  font-family: 'generica';
+  font-size: 1.5em;
+  -webkit-animation: changeColor 2s infinite linear;
+          animation: changeColor 2s infinite linear;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.spinner__middle {
+  position: absolute;
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.spinner__item {
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.spinner__item.red {
+  border-top: 77px solid red;
+  border-right: 77px solid red;
+  border-left: 77px solid transparent;
+  border-bottom: 77px solid transparent;
+  -webkit-animation: spin 2s infinite ease-in-out;
+          animation: spin 2s infinite ease-in-out;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.spinner__item.white {
+  border-left: 77px solid white;
+  border-bottom: 77px solid white;
+  border-top: 77px solid transparent;
+  border-right: 77px solid transparent;
+  -webkit-animation: spin 2s infinite ease-in-out;
+          animation: spin 2s infinite ease-in-out;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(315deg);
+            transform: rotate(315deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(315deg);
+            transform: rotate(315deg);
+  }
+}
+
+@-webkit-keyframes changeColor {
+  0% {
+    color: #0BE6C5;
+  }
+  50% {
+    color: #202020;
+  }
+  75% {
+    color: #0BE6C5;
+  }
+  100% {
+    color: #0BE6C5;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    color: #0BE6C5;
+  }
+  50% {
+    color: #202020;
+  }
+  75% {
+    color: #0BE6C5;
+  }
+  100% {
+    color: #0BE6C5;
+  }
+}
+
+/*Por defecto, los estilos se hacen para los móvildes width <400px*/
+/*Ahora si el movil es de gama media tamaño s 400<width<768*/
+@media screen and (min-width: 400px) {
+  .spinner {
+    margin: 1rem auto;
+  }
+}
+
+/*tamaño m 768<width<1080*/
+@media screen and (min-width: 768px) {
+  .spinner {
+    margin: 1rem auto;
+  }
+}
+
+/*tamaño l 1080<width<1500*/
+@media screen and (min-width: 1080px) {
+  .spinner {
+    margin: 1rem auto;
+  }
+}
+
+/*tamaño xl 1500<width*/
+@media screen and (min-width: 1500px) {
+  .spinner {
+    margin: 1rem auto;
+  }
+}
+
 body {
   background-color: #202020;
   color: #0BE6C5;

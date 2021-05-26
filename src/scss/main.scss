@@ -1,9 +1,9 @@
-@import './responsive';
 @import './variables';
 @import './home';
 @import './spinner';
 @import './page';
 @import './details';
+@import './responsive';
 
 body {
     background-color: $primarydark;
