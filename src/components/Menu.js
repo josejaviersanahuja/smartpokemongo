@@ -1,13 +1,31 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import ListaD from './MenuD/ListaD'
+import ListaEs from './MenuEs/ListaEs'
+import ListaEn from './MenuEn/ListaEn'
 
-export default function Menu() {
-    return (
-        <div className="desplegable">
+
+const poliglota = {
+    'english': <ListaEn />,
+    'spanish': <ListaEs />,
+    'german': <ListaD />
+}
+
+export default function Menu({ language, setlanguage }) {
+
+const handleChange =(e)=>{
+setlanguage(e.target.value);
+}
+
+    return (<>
+        <div className="menu">
             <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/page/0">Lista de Pokemones</Link></li>
+                {poliglota[language]}
             </ul>
         </div>
-    )
+        <select className="language" onChange={handleChange}>
+                <option value="spanish">español</option>
+                <option value="english" >english</option>
+                <option value="german">deutsch</option>
+        </select>
+    </>)
 }

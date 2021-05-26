@@ -9,7 +9,7 @@ export default function DetallesBasicos({ datapok }) {
     return (
         <>
             <div>
-                {datapok[0].nodata ? <h3>Pokemon {datapok[0].name} no tiene datos conocidos </h3> :
+                {datapok[0].nodata ? <h3>Pokemon {datapok[0].name} no details known </h3> :
                     <>
                         <Formas datapok={datapok} setindexFormas={setindexFormas} />
                         <Stats datapokByform={datapok[indexFormas]} />

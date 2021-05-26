@@ -1,9 +1,17 @@
 import React from 'react'
+import AboutEs from './AboutEs'
+import AboutEn from './AboutEn'
+import AboutD from './AboutD'
 
-export default function About() {
+const poliglota = {
+    'english':<AboutEn/>,
+    'spanish':<AboutEs/>,
+    'german':<AboutD/>
+}
+
+export default function index({language}) {
+    
     return (
-        <div>
-            Aqui escribo sobre mi
-        </div>
+        poliglota[language]
     )
 }

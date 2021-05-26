@@ -1,0 +1,25 @@
+$primarydark: #202020;
+$charmander:  #d73b2e;
+$squirtle: #89c3d7;
+$pikachu: #eccd3f;
+$bulbasaur: #2f8846;
+$primarylight: #0BE6C5;
+
+/*como variables es lo primero que importamos... inicializamos todos los selectores */
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+ /*Fuente explusiva para las palabras SMART y GO*/
+@font-face {
+    font-family: 'generica';
+    src: url('../fonts/generica/GenericaBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-strecht: condensed;
+    unicode-range: "U+0-10FFFF";
+}
+
+
+/*Creando funciones*/

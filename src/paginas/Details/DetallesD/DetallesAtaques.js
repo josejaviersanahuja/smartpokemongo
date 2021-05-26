@@ -1,5 +1,6 @@
 import React from 'react'
-import useAttackDetails from '../../hooks/useAttackDetails'
+import Spinner from '../../../components/Spinner'
+import useAttackDetails from '../../../hooks/useAttackDetails'
 import AtaqueCargado from './AtaqueCargado'
 import AtaqueRapido from './AtaqueRapido'
 /*
@@ -29,7 +30,7 @@ export default function DetallesAtaques({fastTrue, chargedTrue}) {
     const {fastAttack, chargedAttack}=useAttackDetails({fastTrue, chargedTrue})
     
     return (<>
-        {fastAttack? <AtaqueRapido fastAttack={fastAttack}/>: <p>loading...</p>}
-        {chargedAttack? <AtaqueCargado chargedAttack={chargedAttack}/> : <p>loading...</p>}
+        {fastAttack? <AtaqueRapido fastAttack={fastAttack}/>: <Spinner/>}
+        {chargedAttack? <AtaqueCargado chargedAttack={chargedAttack}/> : <Spinner/>}
     </>)
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import pokemons from '../../data/pokemons.json'
+import pokemons from '../../../data/pokemons.json'
 export default function Paging({pag}) {
     let listaPokemon=[]
   if (pag<43){

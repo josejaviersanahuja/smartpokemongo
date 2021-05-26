@@ -1,5 +1,5 @@
 import React from 'react'
-import useMejoresAtaques from '../../hooks/useMejoresAtaques'
+import useMejoresAtaques from '../../../hooks/useMejoresAtaques'
 import TablaMejorAtaqueCargado from './TablaMejorAtaqueCargado'
 import TablaMejorAtaqueRapido from './TablaMejorAtaqueRapido'
 /* ambos estados tienen esta forma
@@ -23,16 +23,16 @@ export default function MejoresAtaques({datapokByform}) {
 
     return (
         <table>
-            <caption> Los mejores ataques: </caption>
+            <caption> Best attacks: </caption>
             {mejorComboPoder && mejorComboRapido?
             <thead>
                 <tr>
                     <th></th>
-                    <th>Nombre del ataque</th>
-                    <th>Poder del ataque</th>
-                    <th>Tiempo de ataque / Tiempo de Carga</th>
-                    <th>Golpes por segundo/Golpes antes de carga</th>
-                    <th>Tipo</th>
+                    <th>Name</th>
+                    <th>Power</th>
+                    <th>Time per punch / Time until charged</th>
+                    <th>Punches per sec/Punches before charged </th>
+                    <th>Type</th>
                 </tr>
             </thead> : null }
             <tbody>    

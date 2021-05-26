@@ -1,4 +1,4 @@
-@charset "UTF-8";
+/*como variables es lo primero que importamos... inicializamos todos los selectores */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6,40 +6,20 @@
   padding: 0;
 }
 
-/*trabajemos desde el inicio con funciones*/
+/*Fuente explusiva para las palabras SMART y GO*/
+@font-face {
+  font-family: 'generica';
+  src: url("../fonts/generica/GenericaBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-strecht: condensed;
+  unicode-range: "U+0-10FFFF";
+}
+
+/*Creando funciones*/
 body {
-  font-weight: 700;
-}
-
-/*como el map-get es molesto. hagamos una funcion para abreviarlo*/
-/*como muchas veces repetimos códigos en css, digamos para realizar un display y centrar los items, content etc podemos usar esto... */
-/*usaremos la funcion en &_paragraph y _paragraph
-También unsaremos el dispFlexCenter
-*/
-.main {
-  width: 80%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background-color: #202020;
+  color: #0BE6C5;
   text-align: center;
-}
-
-.main_paragragh {
-  font-weight: 500;
-}
-
-.main .main__paragraph {
-  font-weight: 400;
-}
-
-.main .main__paragraph:hover {
-  color: gray;
 }
 /*# sourceMappingURL=main.css.map */

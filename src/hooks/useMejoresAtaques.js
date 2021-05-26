@@ -58,7 +58,7 @@ export default function useMejoresAtaques({fast_moves, charged_moves}) {
                   arrayAllCombos.push(combo)
               })
           });
-          // console.log(arrayDeFastMoves, arrayDeChargedMoves, arrayAllCombos);
+         
           return arrayAllCombos
       } ,
         [allCharged,allFast,fast_moves,charged_moves],
@@ -82,7 +82,7 @@ export default function useMejoresAtaques({fast_moves, charged_moves}) {
             let maxdps= Math.max(...arrayAllresults)
             let powerindex = arrayAllresults.indexOf(maxdps)
             let result= arrayAllCombos[powerindex]
-            console.log(arrayAllCombos);
+            
             return result
         },
         [allCombos],

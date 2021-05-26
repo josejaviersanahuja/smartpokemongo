@@ -1,2 +1,14 @@
 @import './responsive';
 @import './variables';
+@import './home';
+@import './spinner';
+@import './page';
+@import './details';
+
+body {
+    background-color: $primarydark;
+    color: $primarylight;
+    text-align: center;
+   
+}
+
