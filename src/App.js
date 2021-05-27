@@ -36,6 +36,7 @@ function App() {
       <footer>
         Espero que te guste José Manuel
         <Animacion/>
+        <div className="pikachu"></div>
       </footer>
       
     </>

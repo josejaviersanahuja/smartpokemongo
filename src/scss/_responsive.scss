@@ -6,6 +6,10 @@
         height: 11vh;
         margin:0 2rem;
     }
+    .pikachu {
+        animation: pikachu-s 3s  ease-in-out;
+        animation-delay: 1s;
+    }
 }
 
 /*tamaño m 768<width<1080*/
@@ -60,7 +64,10 @@
         height: 11vh;
         margin:0 8rem;
     }
-     
+    .pikachu {
+        animation: pikachu-m 3s  ease-in-out;
+        animation-delay: 1s;
+    }
 }
 /*tamaño l 1080<width<1500*/
 @include media-l {
@@ -77,6 +84,10 @@
         height: 11vh;
         margin:0 12rem;
     }
+    .pikachu {
+        animation: pikachu-l 3s  ease-in-out;
+        animation-delay: 1s;
+    }
 }
 /*tamaño xl 1500<width*/
 @include media-xl {
@@ -91,5 +102,8 @@
     .buscar__text{
             font-size: 1.2em;
         }
-    
+    .pikachu {
+        animation: pikachu-xl 3s  ease-in-out;
+        animation-delay: 1s;
+    }
 }

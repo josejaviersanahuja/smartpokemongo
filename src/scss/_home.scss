@@ -1,0 +1,12 @@
+.home{
+    background-color: white;
+    &__title{
+        background-color: blue;
+    }
+    &__image{
+        background-color: yellow;
+    }
+    &__text{
+        background-color: red;
+    }
+}

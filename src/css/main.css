@@ -39,7 +39,255 @@
   }
 }
 
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    left: 40%;
+  }
+  20% {
+    -webkit-transform: rotate(135deg) translateX(-10px);
+            transform: rotate(135deg) translateX(-10px);
+    left: 35%;
+  }
+  40% {
+    -webkit-transform: rotate(495deg) translateX(-10px);
+            transform: rotate(495deg) translateX(-10px);
+    left: 30%;
+  }
+  60% {
+    -webkit-transform: rotate(1035deg) translateX(-10px);
+            transform: rotate(1035deg) translateX(-10px);
+    left: 30%;
+  }
+  80% {
+    -webkit-transform: rotate(2555deg) translateX(-10px);
+            transform: rotate(2555deg) translateX(-10px);
+    left: 30%;
+  }
+  87% {
+    -webkit-transform: rotate(4075deg) translateX(-10px);
+            transform: rotate(4075deg) translateX(-10px);
+    left: 30%;
+    bottom: 0;
+  }
+  91% {
+    -webkit-transform: rotate(5595deg) translateX(-10px) scale(0.8);
+            transform: rotate(5595deg) translateX(-10px) scale(0.8);
+    left: 10%;
+    bottom: 40%;
+  }
+  94% {
+    -webkit-transform: rotate(7115deg) translateX(-10px) scale(0.6);
+            transform: rotate(7115deg) translateX(-10px) scale(0.6);
+    left: 25%;
+    bottom: 60%;
+  }
+  97% {
+    -webkit-transform: rotate(8635deg) translateX(0px) scale(0.4);
+            transform: rotate(8635deg) translateX(0px) scale(0.4);
+    left: 40%;
+    bottom: 50%;
+  }
+  99% {
+    -webkit-transform: rotate(10155deg) scale(0.2);
+            transform: rotate(10155deg) scale(0.2);
+    left: 50%;
+    bottom: 45%;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    left: 40%;
+  }
+  20% {
+    -webkit-transform: rotate(135deg) translateX(-10px);
+            transform: rotate(135deg) translateX(-10px);
+    left: 35%;
+  }
+  40% {
+    -webkit-transform: rotate(495deg) translateX(-10px);
+            transform: rotate(495deg) translateX(-10px);
+    left: 30%;
+  }
+  60% {
+    -webkit-transform: rotate(1035deg) translateX(-10px);
+            transform: rotate(1035deg) translateX(-10px);
+    left: 30%;
+  }
+  80% {
+    -webkit-transform: rotate(2555deg) translateX(-10px);
+            transform: rotate(2555deg) translateX(-10px);
+    left: 30%;
+  }
+  87% {
+    -webkit-transform: rotate(4075deg) translateX(-10px);
+            transform: rotate(4075deg) translateX(-10px);
+    left: 30%;
+    bottom: 0;
+  }
+  91% {
+    -webkit-transform: rotate(5595deg) translateX(-10px) scale(0.8);
+            transform: rotate(5595deg) translateX(-10px) scale(0.8);
+    left: 10%;
+    bottom: 40%;
+  }
+  94% {
+    -webkit-transform: rotate(7115deg) translateX(-10px) scale(0.6);
+            transform: rotate(7115deg) translateX(-10px) scale(0.6);
+    left: 25%;
+    bottom: 60%;
+  }
+  97% {
+    -webkit-transform: rotate(8635deg) translateX(0px) scale(0.4);
+            transform: rotate(8635deg) translateX(0px) scale(0.4);
+    left: 40%;
+    bottom: 50%;
+  }
+  99% {
+    -webkit-transform: rotate(10155deg) scale(0.2);
+            transform: rotate(10155deg) scale(0.2);
+    left: 50%;
+    bottom: 45%;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@-webkit-keyframes pikachu {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-60vw);
+            transform: translateX(-60vw);
+  }
+}
+
+@keyframes pikachu {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-60vw);
+            transform: translateX(-60vw);
+  }
+}
+
+@-webkit-keyframes pikachu-s {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-80vw);
+            transform: translateX(-80vw);
+  }
+}
+
+@keyframes pikachu-s {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-80vw);
+            transform: translateX(-80vw);
+  }
+}
+
+@-webkit-keyframes pikachu-m {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-90vw);
+            transform: translateX(-90vw);
+  }
+}
+
+@keyframes pikachu-m {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-90vw);
+            transform: translateX(-90vw);
+  }
+}
+
+@-webkit-keyframes pikachu-l {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+}
+
+@keyframes pikachu-l {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+}
+
+@-webkit-keyframes pikachu-xl {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-105vw);
+            transform: translateX(-105vw);
+  }
+}
+
+@keyframes pikachu-xl {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-105vw);
+            transform: translateX(-105vw);
+  }
+}
+
 /*Creando las funciones de responsiveness*/
+.home {
+  background-color: white;
+}
+
+.home__title {
+  background-color: blue;
+}
+
+.home__image {
+  background-color: yellow;
+}
+
+.home__text {
+  background-color: red;
+}
+
 .spinner {
   position: relative;
   display: -webkit-box;
@@ -105,17 +353,6 @@
           animation: spin 2s infinite ease-in-out;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  100% {
-    -webkit-transform: rotate(315deg);
-            transform: rotate(315deg);
-  }
 }
 
 @keyframes spin {
@@ -354,12 +591,159 @@ header {
   background-color: white;
 }
 
+/*como variables es lo primero que importamos... inicializamos todos los selectores */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Fuente explusiva para las palabras SMART y GO*/
+@font-face {
+  font-family: 'generica';
+  src: url("../fonts/generica/GenericaBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-strecht: condensed;
+  unicode-range: "U+0-10FFFF";
+}
+
+/*Creando funciones*/
+@keyframes arrowMove {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    left: 40%;
+  }
+  20% {
+    -webkit-transform: rotate(135deg) translateX(-10px);
+            transform: rotate(135deg) translateX(-10px);
+    left: 35%;
+  }
+  40% {
+    -webkit-transform: rotate(495deg) translateX(-10px);
+            transform: rotate(495deg) translateX(-10px);
+    left: 30%;
+  }
+  60% {
+    -webkit-transform: rotate(1035deg) translateX(-10px);
+            transform: rotate(1035deg) translateX(-10px);
+    left: 30%;
+  }
+  80% {
+    -webkit-transform: rotate(2555deg) translateX(-10px);
+            transform: rotate(2555deg) translateX(-10px);
+    left: 30%;
+  }
+  87% {
+    -webkit-transform: rotate(4075deg) translateX(-10px);
+            transform: rotate(4075deg) translateX(-10px);
+    left: 30%;
+    bottom: 0;
+  }
+  91% {
+    -webkit-transform: rotate(5595deg) translateX(-10px) scale(0.8);
+            transform: rotate(5595deg) translateX(-10px) scale(0.8);
+    left: 10%;
+    bottom: 40%;
+  }
+  94% {
+    -webkit-transform: rotate(7115deg) translateX(-10px) scale(0.6);
+            transform: rotate(7115deg) translateX(-10px) scale(0.6);
+    left: 25%;
+    bottom: 60%;
+  }
+  97% {
+    -webkit-transform: rotate(8635deg) translateX(0px) scale(0.4);
+            transform: rotate(8635deg) translateX(0px) scale(0.4);
+    left: 40%;
+    bottom: 50%;
+  }
+  99% {
+    -webkit-transform: rotate(10155deg) scale(0.2);
+            transform: rotate(10155deg) scale(0.2);
+    left: 50%;
+    bottom: 45%;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes pikachu {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-60vw);
+            transform: translateX(-60vw);
+  }
+}
+
+@keyframes pikachu-s {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-80vw);
+            transform: translateX(-80vw);
+  }
+}
+
+@keyframes pikachu-m {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-90vw);
+            transform: translateX(-90vw);
+  }
+}
+
+@keyframes pikachu-l {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+}
+
+@keyframes pikachu-xl {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-105vw);
+            transform: translateX(-105vw);
+  }
+}
+
+/*Creando las funciones de responsiveness*/
 .animacion {
   position: fixed;
   bottom: 0;
   left: 50%;
-  -webkit-transform: translateX(-100px);
-          transform: translateX(-100px);
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -405,69 +789,21 @@ header {
   border-right: 77px solid transparent;
 }
 
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  20% {
-    -webkit-transform: rotate(135deg) translateX(-10px);
-            transform: rotate(135deg) translateX(-10px);
-    left: 45%;
-  }
-  40% {
-    -webkit-transform: rotate(495deg) translateX(-10px);
-            transform: rotate(495deg) translateX(-10px);
-    left: 40%;
-  }
-  60% {
-    -webkit-transform: rotate(1035deg) translateX(-10px);
-            transform: rotate(1035deg) translateX(-10px);
-    left: 35%;
-  }
-  80% {
-    -webkit-transform: rotate(2555deg) translateX(-10px);
-            transform: rotate(2555deg) translateX(-10px);
-    left: 30%;
-  }
-  87% {
-    -webkit-transform: rotate(4075deg) translateX(-10px);
-            transform: rotate(4075deg) translateX(-10px);
-    left: 30%;
-    bottom: 0;
-  }
-  91% {
-    -webkit-transform: rotate(5595deg) translateX(-10px) scale(0.8);
-            transform: rotate(5595deg) translateX(-10px) scale(0.8);
-    left: 10%;
-    bottom: 40%;
-  }
-  94% {
-    -webkit-transform: rotate(7115deg) translateX(-10px) scale(0.6);
-            transform: rotate(7115deg) translateX(-10px) scale(0.6);
-    left: 25%;
-    bottom: 60%;
-  }
-  97% {
-    -webkit-transform: rotate(8635deg) translateX(0px) scale(0.4);
-            transform: rotate(8635deg) translateX(0px) scale(0.4);
-    left: 40%;
-    bottom: 50%;
-  }
-  99% {
-    -webkit-transform: rotate(10155deg) scale(0.2);
-            transform: rotate(10155deg) scale(0.2);
-    left: 50%;
-    bottom: 45%;
-  }
-  100% {
-    display: none;
-  }
+.pikachu {
+  position: fixed;
+  top: 40%;
+  right: -60%;
+  width: 140px;
+  height: 140px;
+  background-image: url("../images/Pikachutransparente.png");
+  background-size: contain;
+  -webkit-animation: pikachu 3s  ease-in-out;
+          animation: pikachu 3s  ease-in-out;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
-@-webkit-keyframes throw {}
-
-@keyframes throw {}nav {
+nav {
   padding-top: 7vh;
 }
 
@@ -501,8 +837,6 @@ legend {
 }
 
 .buscar__boton {
-  position: relative;
-  top: -4px;
   background-color: #202020;
   border-radius: 0;
   border-bottom-right-radius: 5px;
@@ -522,8 +856,6 @@ legend {
 }
 
 .buscar__text {
-  position: relative;
-  top: -4px;
   border-radius: 0;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
@@ -550,6 +882,12 @@ img {
   fieldset {
     height: 11vh;
     margin: 0 2rem;
+  }
+  .pikachu {
+    -webkit-animation: pikachu-s 3s  ease-in-out;
+            animation: pikachu-s 3s  ease-in-out;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
   }
 }
 
@@ -611,6 +949,12 @@ img {
     height: 11vh;
     margin: 0 8rem;
   }
+  .pikachu {
+    -webkit-animation: pikachu-m 3s  ease-in-out;
+            animation: pikachu-m 3s  ease-in-out;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
 }
 
 /*tamaño l 1080<width<1500*/
@@ -625,6 +969,12 @@ img {
     height: 11vh;
     margin: 0 12rem;
   }
+  .pikachu {
+    -webkit-animation: pikachu-l 3s  ease-in-out;
+            animation: pikachu-l 3s  ease-in-out;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
 }
 
 /*tamaño xl 1500<width*/
@@ -638,6 +988,12 @@ img {
   }
   .buscar__text {
     font-size: 1.2em;
+  }
+  .pikachu {
+    -webkit-animation: pikachu-xl 3s  ease-in-out;
+            animation: pikachu-xl 3s  ease-in-out;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
   }
 }
 /*# sourceMappingURL=main.css.map */

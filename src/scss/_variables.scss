@@ -36,7 +36,122 @@ $primarylight: #0BE6C5;
         transform: translateY(15px);
     }
 }
+@keyframes spin {
+    0% { 
+        transform: rotate(-45deg);
+        left: 40%;
+    }
+    20% { 
+        transform: rotate(135deg)
+        translateX(-10px);
+        left: 35%;
+        //;
+    }
+    40% { 
+        transform: rotate(495deg)
+        translateX(-10px);
+        left:30%;
+        //;
+    }
+    60% { 
+        transform: rotate(1035deg)
+        translateX(-10px);
+        left:30%;
+        //
+    }
+    80% { 
+        transform: rotate( 2555deg)
+        translateX(-10px);
+        left:30%;
+        
+    } 
+    87% { 
+        transform: rotate(4075deg)
+        translateX(-10px);
+        left:30%;
+        bottom: 0;
+    }
+    91% { 
+        transform: rotate(5595deg)
+        translateX(-10px)
+         scale(0.8);
+        left: 10%;
+        bottom: 40%;
+        //;
+    }
+    94% { 
+        transform: rotate(7115deg)
+        translateX(-10px)
+        scale(0.6);
+        left:25%;
+        bottom: 60%;
+        //;
+    }
+    
+    97% { 
+        transform: rotate(8635deg)
+        translateX(0px)
+        scale(0.4);
+        left:40%;
+        bottom: 50%;
+        //
+    }
+    99% { 
+        transform: rotate( 10155deg)
+        scale(0.2);
+        left:50%;
+        bottom: 45%;
+        
+    } 
+    100%{
+        display: none;
+    }
+}
 
+@keyframes pikachu {
+    0% {
+        transform: translateX(0);
+     }
+    100% {
+        transform: translateX(-60vw);
+    }
+}
+
+@keyframes pikachu-s {
+    0% {
+        transform: translateX(0);
+     }
+    100% {
+        transform: translateX(-80vw);
+    }
+}
+
+@keyframes pikachu-m {
+    0% {
+        transform: translateX(0);
+     }
+    100% {
+        transform: translateX(-90vw);
+    }
+}
+
+@keyframes pikachu-l {
+    0% {
+        transform: translateX(0);
+     }
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes pikachu-xl {
+    0% {
+        transform: translateX(0);
+     }
+    100% {
+        transform: translateX(-105vw);
+    }
+}
 /*Creando las funciones de responsiveness*/
 
 @mixin media-s {
