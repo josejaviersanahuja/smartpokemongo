@@ -10,6 +10,7 @@ import Home from './paginas/Home'
 import About from './paginas/About'
 import LanguageContext from './context/LanguageContext'
 import AreYouLost from './paginas/AreYouLost'
+import Animacion from "./components/Animacion";
 //q2import Spinner from "./components/Spinner";
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
         </Switch>
       <footer>
         Espero que te guste José Manuel
-        
+        <Animacion/>
       </footer>
       
     </>

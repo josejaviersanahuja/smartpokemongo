@@ -1,0 +1,127 @@
+.animacion{
+    position: fixed;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin: 1rem auto;
+    animation: spin 4s linear;
+   
+    
+    &__middle {
+        position: absolute;
+        background-color: white;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+
+    }
+    &__item {
+        border-radius: 50%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+       
+        &.red {
+            border-top: 77px solid red;
+            border-right: 77px solid red;
+            border-left: 77px solid transparent;
+            border-bottom: 77px solid transparent;
+            
+            
+        }
+       
+        &.white {
+            border-left: 77px solid white;
+            border-bottom: 77px solid white;
+            border-top: 77px solid transparent;
+            border-right: 77px solid transparent;
+           
+            
+        }
+    }
+    
+}
+
+@keyframes spin {
+    0% { 
+        transform: rotate(-45deg);
+    }
+    20% { 
+        transform: rotate(135deg)
+        translateX(-10px);
+        left: 45%;
+        //;
+    }
+    40% { 
+        transform: rotate(495deg)
+        translateX(-10px);
+        left:40%;
+        //;
+    }
+    60% { 
+        transform: rotate(1035deg)
+        translateX(-10px);
+        left:35%;
+        //
+    }
+    80% { 
+        transform: rotate( 2555deg)
+        translateX(-10px);
+        left:30%;
+        
+    } 
+    87% { 
+        transform: rotate(4075deg)
+        translateX(-10px);
+        left:30%;
+        bottom: 0;
+    }
+    91% { 
+        transform: rotate(5595deg)
+        translateX(-10px)
+         scale(0.8);
+        left: 10%;
+        bottom: 40%;
+        //;
+    }
+    94% { 
+        transform: rotate(7115deg)
+        translateX(-10px)
+        scale(0.6);
+        left:25%;
+        bottom: 60%;
+        //;
+    }
+    
+    97% { 
+        transform: rotate(8635deg)
+        translateX(0px)
+        scale(0.4);
+        left:40%;
+        bottom: 50%;
+        //
+    }
+    99% { 
+        transform: rotate( 10155deg)
+        scale(0.2);
+        left:50%;
+        bottom: 45%;
+        
+    } 
+    100%{
+        display: none;
+    }
+}
+
+@keyframes throw {
+    
+    
+    
+       
+    
+}
