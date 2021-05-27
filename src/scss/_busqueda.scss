@@ -1,0 +1,63 @@
+
+nav {
+    padding-top: 7vh;
+   // background-color: lightblue;
+}
+#buscar_pokemon{
+    background-color: blue;
+
+}
+
+fieldset {
+    //background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 11vh;
+    border-radius: 5px;
+    border-color: $primarylight;
+    margin:0 1rem;
+}
+
+#pokemons>option {
+    background-color:green;
+    width: 50%;
+}
+legend {
+    //background-color: red;
+    font-weight: 700;
+}
+.buscar__boton{
+    position: relative;
+    top: -4px;
+    background-color: $primarydark;
+    border-radius: 0;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid $primarylight;
+    border-left: transparent;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    color: $primarylight;
+    padding:0.5rem;
+    
+    &:hover{
+        background-color: $primarylight;
+        color: $primarydark;
+    }
+
+}
+
+.buscar__text {
+    position: relative;
+    top: -4px;
+    border-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 1px solid $primarylight;
+    border-right: transparent;
+    font-size: 1em;
+    padding:0.5rem;
+}

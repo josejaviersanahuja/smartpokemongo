@@ -1,27 +1,95 @@
 /*Por defecto, los estilos se hacen para los móvildes width <400px*/
 /*Ahora si el movil es de gama media tamaño s 400<width<768*/
 @include media-s {
-    .spinner{
-        margin:1rem auto;
+    // nothing on spinner/menu/select
+    fieldset {
+        height: 11vh;
+        margin:0 2rem;
     }
 }
 
 /*tamaño m 768<width<1080*/
-
 @include media-m {
-    .spinner{
-        margin:1rem auto;
+    //nothing on spinner
+    .language{
+       padding: 4px 8px;
+       font-size: 0.85em;
+       top: 1.1rem;
+       right: 2rem;
     }
+    header {
+        height: 8vh;
+    }
+    .boton {
+        display: none;
+    }
+    .menu {
+        transform: translateY(0);
+        height: 8vh;
+        width:70%;
+        & ul {
+            display: flex;
+            flex-direction: row;
+            height: 8vh;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0.5rem;
+            &>a{
+                font-weight: 700;
+                & li{
+                    border: 1px solid $primarydark;
+                    border-radius: 5px;
+                    //border-top-right-radius: %;
+                }
+            }
+        }
+        &.open {
+            transform: translateY(0);
+            & ul{
+                padding:0.5rem;
+            }
+        } 
+    }
+
+    nav {
+        padding-top: 9vh;
+    }
+
+    fieldset {
+        height: 11vh;
+        margin:0 8rem;
+    }
+     
 }
 /*tamaño l 1080<width<1500*/
 @include media-l {
-    .spinner{
-        margin:1rem auto;
+    //nothing on spinner/ 
+    .menu {
+        & a{
+            font-size: 1.2em;
+        }
+    }
+    .language {
+        font-size: 1.1em;
+    }
+    fieldset {
+        height: 11vh;
+        margin:0 12rem;
     }
 }
 /*tamaño xl 1500<width*/
 @include media-xl {
-    .spinner{
-        margin:1rem auto;
+    //nothing on spinner/ select
+    fieldset {
+        height: 11vh;
+        margin:0 16rem;
     }
+    .buscar__boton{
+            font-size: 1.2em;
+        }
+    .buscar__text{
+            font-size: 1.2em;
+        }
+    
 }

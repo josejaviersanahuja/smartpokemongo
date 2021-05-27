@@ -1,11 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-export default function ListaEs() {
+export default function ListaEs({handleClick}) {
     return (
         <>
-            <li><Link to="/">Principal</Link></li>
-            <li><Link to="/page/0">Lista de Pokemones</Link></li>
-            <li><Link to="/about">Acerca de</Link></li>
+            <Link to="/" onClick={handleClick}><li>Principal</li></Link>
+            <Link to="/page/0" onClick={handleClick}><li>Lista de Pokemones</li></Link>
+            <Link to="/about" onClick={handleClick}><li>Acerca de</li></Link>
         </>)
 }

@@ -1,0 +1,162 @@
+header {
+    position: fixed;
+    width: 100%;
+    height: 6vh;
+    background-color: rgba($color: $primarylight, $alpha: 1);
+    //border: 2px solid $primarylight; // quitar este borde creo
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom-left-radius: 15px ;
+    border-bottom-right-radius: 15px ;
+}
+/* estilo al componente menu*/
+.menu {
+    width: 38vw;
+    transform: translateY(-100vh);
+    transition: all 0.5s ease-in-out;
+   
+    & ul {
+        background-color: rgba($color:$primarylight,  $alpha: 1);
+        border-bottom-left-radius: 15px ;
+        border-bottom-right-radius: 15px ;
+        padding: 1rem;
+        
+        a{
+            text-decoration: none;
+            color: $primarydark;
+            
+            &:hover{
+                font-size: 1.1em;
+                &>li{
+                    background-color: lighten($color: $primarylight, $amount: 8%);
+                }  
+            }
+            &>li{
+                list-style: none;
+                padding: 0.5rem;
+                text-align: left;
+                
+            }   
+        }
+        
+    }
+    &.open{
+        transform: translateY(145px);
+        margin-left: 0rem;
+        
+        & ul{
+            padding: 3rem 1rem 1rem 1rem;
+            a{
+                text-decoration: none;
+                color: $primarydark;
+                &:hover{
+                    font-size: 1.1em;
+                    &>li{
+                        background-color: lighten($color: $primarylight, $amount: 8%);
+                    }  
+                }
+                &>li{
+                    list-style: none;
+                    padding: 0.5rem;
+                    text-align: left;
+                }   
+            }
+            
+        }
+    }
+}
+
+.boton {
+    position: fixed;
+    left: 3rem;
+    top: 0.3rem;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    
+    border-radius: 50%;
+    background-color: lighten($color:$primarydark, $amount: 10%);
+    transition: all 0.5s ease;
+     &.open{
+        transform: rotate(180deg);
+        
+    } 
+}
+
+.arrow {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border: 5px solid transparent;
+    border-top: 5px solid $primarylight;
+    margin:auto;
+    
+    &.first{
+        opacity: 1;
+        top:5px
+    }
+    &.second{
+        opacity: 0;
+        top:-5px;
+    }
+    &.third{
+        opacity: 0;
+        top:-15px;
+    }
+
+}
+
+.boton:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    .arrow {
+        &.first{
+            animation: arrowMove 2.1s infinite ease;
+        }
+        &.second{
+            animation: arrowMove 2.1s infinite ease;
+            animation-delay: 0.7s;
+        }
+        &.third {
+            animation: arrowMove 2.1s infinite ease;
+            animation-delay: 1.4s;
+        }
+    }
+}
+.boton.open:hover {
+    transform: scale(1.1);
+    transform: rotate(180deg);
+    cursor: pointer;
+    .arrow {
+        &.first{
+            animation: arrowMove 2.1s infinite ease;
+        }
+        &.second{
+            animation: arrowMove 2.1s infinite ease;
+            animation-delay: 0.7s;
+        }
+        &.third {
+            animation: arrowMove 2.1s infinite ease;
+            animation-delay: 1.4s;
+        }
+    }
+}
+
+.language{
+    position: fixed;
+    top:0.6rem;
+    right: 1.5rem;
+    border-radius: 5px ;
+    background-color: lighten($color:$primarylight, $amount: 35%);
+    font-weight: 700;
+    border: 3px solid lighten($color:$primarydark, $amount: 10%);
+    cursor: pointer;
+    
+    & option {
+        background-color: white;
+    }
+    //padding: 8px 12px; se puede hacer mas grande el select
+}
+

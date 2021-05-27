@@ -23,6 +23,20 @@ $primarylight: #0BE6C5;
 
 /*Creando funciones*/
 
+@mixin estandardtransition {
+    transition: all 0.5 ease-in-out;
+}
+
+@keyframes arrowMove {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+}
+
 /*Creando las funciones de responsiveness*/
 
 @mixin media-s {

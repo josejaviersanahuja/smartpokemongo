@@ -52,16 +52,12 @@
 
 @keyframes spin {
     0% { transform: rotate(-45deg);}
-    100% { transform: rotate( 315deg);} //42%
-    //58% { transform: rotate( 315deg);}
-    //100% { transform: rotate( 675deg);}
+    100% { transform: rotate( 315deg);} 
 }
 
 @keyframes changeColor {
     0% { color: $primarylight;}
-    50% { color: $primarydark;} //12
-    75% {color: $primarylight;} //32
-   // 72% {color: $primarydark;}
-    //90% { color: $primarylight;}
+    50% { color: $primarydark;} 
+    75% {color: $primarylight;} 
     100% { color: $primarylight;}
 }

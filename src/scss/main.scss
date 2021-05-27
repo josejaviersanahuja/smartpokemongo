@@ -3,12 +3,20 @@
 @import './spinner';
 @import './page';
 @import './details';
-@import './responsive';
+@import './menu';
+@import './busqueda';
+
 
 body {
     background-color: $primarydark;
     color: $primarylight;
     text-align: center;
-   
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
 
+ 
+img {
+    width: 90vw;
+}
+
+@import './responsive';

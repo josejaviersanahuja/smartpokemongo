@@ -19,7 +19,7 @@ export default function Busqueda({language}) {
             <fieldset>
             {poliglota[language]}
               
-             <p></p> {arrayBusqueda.length !== 0 ? <datalist id="pokemons" form="buscar_pokemon" name="filtrodebusqueda" >
+              {arrayBusqueda.length !== 0 ? <datalist id="pokemons" form="buscar_pokemon" name="filtrodebusqueda" >
               
                       {arrayBusqueda.map(e =>
                           <option
