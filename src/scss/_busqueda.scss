@@ -1,19 +1,10 @@
 
-nav {
-    padding-top: 7vh;
-   // background-color: lightblue;
-}
-#buscar_pokemon{
-    background-color: blue;
 
-}
 
-fieldset {
-    //background-color: yellow;
+.buscar__fieldset {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     height: 11vh;
     border-radius: 5px;
     border-color: $primarylight;
@@ -25,7 +16,6 @@ fieldset {
     width: 50%;
 }
 legend {
-    //background-color: red;
     font-weight: 700;
 }
 .buscar__boton{
@@ -50,7 +40,7 @@ legend {
 }
 
 .buscar__text {
-    
+    display: absolute;
     border-radius: 0;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
@@ -58,4 +48,60 @@ legend {
     border-right: transparent;
     font-size: 1em;
     padding:0.5rem;
+}
+
+/// ***********************************************
+nav {
+    position: relative;
+    top: 0;
+   
+     // empujar hacia abajo
+    //overflow: hidden;
+    animation: destellorequires 6s ease-in-out;
+    &::after{
+        content: "";
+        visibility: hidden; //hidden
+        position: absolute;
+        top:100%;
+        left: 0;
+        width: 100%;
+        height: 0; //0
+        //transform: translateY(-100vh);
+        background-color: white;
+        animation: destello 2s ease-in-out;
+        animation-delay: 4s;
+    }
+}
+
+@keyframes destello {
+    0% {
+        transform: translateY(-129vh);
+        opacity: 1;
+        visibility: visible;
+        height: 300%;
+    }
+    99% {
+        transform: translateY(-129vh);
+        opacity: 0;
+        visibility: visible;
+        height: 300%;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+    }
+}
+@keyframes destellorequires {
+    0% {
+        width:100vw;
+    height: 100vh;
+    margin-bottom: -85vh;
+    }
+    100%{
+        width:100vw;
+    height: 100vh;
+    margin-bottom: -85vh;
+    }
 }

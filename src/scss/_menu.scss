@@ -1,6 +1,21 @@
-header {
+
+.logo {
+    
+    height: 20vh;
+    width: 96vw;
+    margin-top: 9vh;
+    background-image: url('../images/logoSmartPokemonGo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: imagen 7s  ease-in-out;
+
+}
+
+.header {
     position: fixed;
-    width: 100%;
+    top:0;
+    width: 100vw;
     height: 6vh;
     background-color: rgba($color: $primarylight, $alpha: 1);
     //border: 2px solid $primarylight; // quitar este borde creo
@@ -43,10 +58,13 @@ header {
         
     }
     &.open{
+        display: relative;
+        z-index: 1;
         transform: translateY(145px);
         margin-left: 0rem;
         
         & ul{
+            display: relative;
             padding: 3rem 1rem 1rem 1rem;
             
             a{
@@ -73,7 +91,7 @@ header {
     position: fixed;
     left: 3rem;
     top: 0.3rem;
-    z-index: 1;
+    z-index: 2;
     width: 30px;
     height: 30px;
     
@@ -146,9 +164,9 @@ header {
 }
 
 .language{
-    position: fixed;
+    position: absolute;
     top:0.6rem;
-    right: 1.5rem;
+    right: 2rem;
     border-radius: 5px ;
     background-color: lighten($color:$primarylight, $amount: 35%);
     font-weight: 700;
@@ -161,3 +179,14 @@ header {
     //padding: 8px 12px; se puede hacer mas grande el select
 }
 
+@keyframes imagen {
+    0% {
+        transform: scale(0);
+    }
+    75%{
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -11,19 +11,34 @@ import About from './paginas/About'
 import LanguageContext from './context/LanguageContext'
 import AreYouLost from './paginas/AreYouLost'
 import Animacion from "./components/Animacion";
+//import useMenuClases from './hooks/useMenuClases'
 //q2import Spinner from "./components/Spinner";
 
 function App() {
-  const {language, setlanguage}= useContext(LanguageContext)
-  
+  const {language, setlanguage,handleClick, handleChange, claseBoton, claseMenu, menuOpen }= useContext(LanguageContext)
+  //const {openMenu} = useMenuClases({setlanguage})
+  //const {handleClick, handleChange, claseBoton, claseMenu} = useContext(LanguageContext)
+  console.log(menuOpen);
   return (
     <>
       
       <header>
-        <Menu language={language} setlanguage= {setlanguage}/>
+        <div className="logo">
+          <div className="bulbasaurCharmander"></div>
+          <div className="squirtlePikachu"></div>
+        </div>
+        <Menu 
+          language={language} 
+          setlanguage= {setlanguage} 
+          handleClick={handleClick}
+          handleChange={handleChange}
+          claseBoton={claseBoton}
+          claseMenu={claseMenu}
+        />
       </header>
       <nav>
-        <Busqueda language={language}/>
+        <Busqueda language={language} menuOpen={menuOpen}/>
+        
       </nav>
       <Switch>
       

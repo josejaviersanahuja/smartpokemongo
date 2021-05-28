@@ -15,7 +15,7 @@ export default function TablaMejorAtaqueCargado({mejorComboPoder}) {
                     
                     <td>{mejorComboPoder.namecharged}</td>
                     <td>{mejorComboPoder.powercharged}</td>
-                    <td>{mejorComboPoder.howlongtocharge} seg</td>
+                    <td className="time">{mejorComboPoder.howlongtocharge} seg</td>
                     <td>{mejorComboPoder.howmanypunches} golpes </td>
                     <td>{mejorComboPoder.typeFast}</td>
                 </tr>

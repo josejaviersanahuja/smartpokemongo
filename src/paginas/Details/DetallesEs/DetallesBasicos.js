@@ -8,7 +8,6 @@ export default function DetallesBasicos({ datapok }) {
     
     return (
         <>
-            <div>
                 {datapok[0].nodata ? <h3>El Pokemon {datapok[0].name} no tiene datos conocidos </h3> :
                     <>
                         <Formas datapok={datapok} setindexFormas={setindexFormas} />
@@ -16,7 +15,6 @@ export default function DetallesBasicos({ datapok }) {
                         <DetallesAvanzados datapokByform={datapok[indexFormas]} />
                     </>
                 }
-            </div>
         </>
     )
 }

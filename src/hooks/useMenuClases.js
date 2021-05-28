@@ -15,6 +15,6 @@ export default function useMenuClases({setlanguage}) {
        setmenuOpen(!menuOpen)
     }
     
-    return {handleClick, handleChange, claseBoton, claseMenu}
+    return {handleClick, handleChange, claseBoton, claseMenu, menuOpen}
     
 }

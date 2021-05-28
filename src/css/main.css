@@ -271,21 +271,54 @@
   }
 }
 
+@-webkit-keyframes footer {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes footer {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
 /*Creando las funciones de responsiveness*/
 .home {
-  background-color: white;
+  height: 55vh;
+  padding: 1rem;
+  overflow-y: scroll;
 }
 
 .home__title {
-  background-color: blue;
+  margin-bottom: 1rem;
 }
 
-.home__image {
-  background-color: yellow;
+.home__p {
+  padding: 0.5rem;
 }
 
-.home__text {
-  background-color: red;
+.home__list {
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  text-align: left;
+  font-size: 0.9em;
+  list-style-position: inside;
+  font-weight: bold;
+}
+
+.home__list li {
+  padding: 0.5rem 0;
+}
+
+.home__list span {
+  font-weight: 400;
 }
 
 .spinner {
@@ -338,8 +371,8 @@
   border-right: 77px solid red;
   border-left: 77px solid transparent;
   border-bottom: 77px solid transparent;
-  -webkit-animation: spin 2s infinite ease-in-out;
-          animation: spin 2s infinite ease-in-out;
+  -webkit-animation: spinSpinner 2s infinite ease-in-out;
+          animation: spinSpinner 2s infinite ease-in-out;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
@@ -349,13 +382,24 @@
   border-bottom: 77px solid white;
   border-top: 77px solid transparent;
   border-right: 77px solid transparent;
-  -webkit-animation: spin 2s infinite ease-in-out;
-          animation: spin 2s infinite ease-in-out;
+  -webkit-animation: spinSpinner 2s infinite ease-in-out;
+          animation: spinSpinner 2s infinite ease-in-out;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-@keyframes spin {
+@-webkit-keyframes spinSpinner {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(315deg);
+            transform: rotate(315deg);
+  }
+}
+
+@keyframes spinSpinner {
   0% {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
@@ -396,9 +440,188 @@
   }
 }
 
-header {
+.page {
+  padding: 1rem;
+  margin: 1rem;
+  height: 55vh;
+  overflow-y: scroll;
+  border: 6px double #0BE6C5;
+  border-radius: 10px;
+}
+
+.page button {
+  background-color: #202020;
+  border-radius: 5px;
+  border: 1px solid #0BE6C5;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  color: #0BE6C5;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.page button:hover {
+  background-color: #0BE6C5;
+  color: #202020;
+}
+
+.page ol {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.5rem;
+}
+
+.page ol li {
+  position: relative;
+  display: inline-block;
+}
+
+.page ol li span {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+}
+
+.page ol li img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #0BE6C5;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.page ol li:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.details {
+  margin-top: 1rem;
+}
+
+.details h3 {
+  margin-bottom: 1rem;
+}
+
+.details button {
+  background-color: #202020;
+  border-radius: 5px;
+  border: 1px solid #0BE6C5;
+  font-size: 0.9em;
+  font-weight: 700;
+  cursor: pointer;
+  color: #0BE6C5;
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+
+.details button:hover {
+  background-color: #0BE6C5;
+  color: #202020;
+}
+
+.stats {
+  margin: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.stats ul {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.stats ul li {
+  padding: 0.1rem;
+}
+
+.attackselection {
+  cursor: pointer;
+}
+
+.attackselection fieldset {
+  margin: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.attackselection fieldset ul {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.attackselection fieldset ul li {
+  padding: 0.1rem;
+}
+
+.attackselection p {
+  margin: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: #0BE6C5;
+  color: #202020;
+}
+
+.contenedor {
+  width: 85vw;
+  height: 35vh;
+  overflow-y: hidden;
+  overflow-x: auto;
+  border: 6px double #0BE6C5;
+  border-radius: 10px;
+  margin: 1rem 2rem;
+}
+
+.details__combo {
+  width: auto;
+  height: 20vh;
+}
+
+table {
+  font-size: 1em;
+  width: 800px;
+  height: 20vh;
+  padding: 0.2rem;
+  margin: 0 0.5rem;
+  border: 1px solid #0BE6C5;
+  border-radius: 5px;
+}
+
+table caption {
+  font-weight: 700;
+  font-size: 1.4em;
+  text-align: left;
+  padding: 0.5rem 1rem;
+}
+
+.tabla__fila1 {
+  border-bottom: 1px solid #0BE6C5;
+}
+
+.time {
+  border: 1px solid #0BE6C5;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.logo {
+  height: 20vh;
+  width: 96vw;
+  margin-top: 9vh;
+  background-image: url("../images/logoSmartPokemonGo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-animation: imagen 7s  ease-in-out;
+          animation: imagen 7s  ease-in-out;
+}
+
+.header {
   position: fixed;
-  width: 100%;
+  top: 0;
+  width: 100vw;
   height: 6vh;
   background-color: #0be6c5;
   display: -webkit-box;
@@ -454,12 +677,15 @@ header {
 }
 
 .menu.open {
+  display: relative;
+  z-index: 1;
   -webkit-transform: translateY(145px);
           transform: translateY(145px);
   margin-left: 0rem;
 }
 
 .menu.open ul {
+  display: relative;
   padding: 3rem 1rem 1rem 1rem;
 }
 
@@ -486,7 +712,7 @@ header {
   position: fixed;
   left: 3rem;
   top: 0.3rem;
-  z-index: 1;
+  z-index: 2;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -577,9 +803,9 @@ header {
 }
 
 .language {
-  position: fixed;
+  position: absolute;
   top: 0.6rem;
-  right: 1.5rem;
+  right: 2rem;
   border-radius: 5px;
   background-color: #a9fbee;
   font-weight: 700;
@@ -589,6 +815,36 @@ header {
 
 .language option {
   background-color: white;
+}
+
+@-webkit-keyframes imagen {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  75% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes imagen {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  75% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 /*como variables es lo primero que importamos... inicializamos todos los selectores */
@@ -737,6 +993,15 @@ header {
   }
 }
 
+@keyframes footer {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
 /*Creando las funciones de responsiveness*/
 .animacion {
   position: fixed;
@@ -803,15 +1068,13 @@ header {
           animation-delay: 1s;
 }
 
-nav {
-  padding-top: 7vh;
+footer {
+  visibility: hidden;
+  -webkit-animation: footer 5s ease-in-out;
+          animation: footer 5s ease-in-out;
 }
 
-#buscar_pokemon {
-  background-color: blue;
-}
-
-fieldset {
+.buscar__fieldset {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -856,6 +1119,7 @@ legend {
 }
 
 .buscar__text {
+  display: absolute;
   border-radius: 0;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
@@ -863,6 +1127,136 @@ legend {
   border-right: transparent;
   font-size: 1em;
   padding: 0.5rem;
+}
+
+nav {
+  position: relative;
+  top: 0;
+  -webkit-animation: destellorequires 6s ease-in-out;
+          animation: destellorequires 6s ease-in-out;
+}
+
+nav::after {
+  content: "";
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: white;
+  -webkit-animation: destello 2s ease-in-out;
+          animation: destello 2s ease-in-out;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+@-webkit-keyframes destello {
+  0% {
+    -webkit-transform: translateY(-129vh);
+            transform: translateY(-129vh);
+    opacity: 1;
+    visibility: visible;
+    height: 300%;
+  }
+  99% {
+    -webkit-transform: translateY(-129vh);
+            transform: translateY(-129vh);
+    opacity: 0;
+    visibility: visible;
+    height: 300%;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+@keyframes destello {
+  0% {
+    -webkit-transform: translateY(-129vh);
+            transform: translateY(-129vh);
+    opacity: 1;
+    visibility: visible;
+    height: 300%;
+  }
+  99% {
+    -webkit-transform: translateY(-129vh);
+            transform: translateY(-129vh);
+    opacity: 0;
+    visibility: visible;
+    height: 300%;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+@-webkit-keyframes destellorequires {
+  0% {
+    width: 100vw;
+    height: 100vh;
+    margin-bottom: -85vh;
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    margin-bottom: -85vh;
+  }
+}
+
+@keyframes destellorequires {
+  0% {
+    width: 100vw;
+    height: 100vh;
+    margin-bottom: -85vh;
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    margin-bottom: -85vh;
+  }
+}
+
+.about {
+  height: 55vh;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+.about__text {
+  padding: 0.5rem;
+}
+
+.about__text__part h3 {
+  font-size: 1.4em;
+}
+
+.about__text__part p {
+  padding: 0.5rem;
+}
+
+.about__text__part p a {
+  color: #0BE6C5;
+  padding: 0 1rem;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.about__text__part p a:hover {
+  color: #47f6dc;
+  font-size: 1.1em;
 }
 
 body {
@@ -879,15 +1273,43 @@ img {
 /*Por defecto, los estilos se hacen para los móvildes width <400px*/
 /*Ahora si el movil es de gama media tamaño s 400<width<768*/
 @media screen and (min-width: 400px) {
-  fieldset {
-    height: 11vh;
-    margin: 0 2rem;
-  }
   .pikachu {
     -webkit-animation: pikachu-s 3s  ease-in-out;
             animation: pikachu-s 3s  ease-in-out;
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
+  }
+  .home {
+    overflow-y: visible;
+  }
+  .home__title {
+    font-size: 2.2em;
+  }
+  .home__p {
+    font-size: 1.1em;
+  }
+  .home__list {
+    font-size: 1em;
+    padding: 0 3rem;
+  }
+  .about {
+    overflow: visible;
+  }
+  .about__text {
+    padding: 1rem;
+  }
+  .about__text__part {
+    padding: 0 1rem;
+  }
+  .about__text__part h3 {
+    font-size: 1.4em;
+  }
+  .about__text__part p {
+    padding: 0.5rem 1rem;
+    text-align: justify;
+  }
+  .contenedor {
+    height: 30vh;
   }
 }
 
@@ -896,11 +1318,8 @@ img {
   .language {
     padding: 4px 8px;
     font-size: 0.85em;
-    top: 1.1rem;
+    top: 0.6rem;
     right: 2rem;
-  }
-  header {
-    height: 8vh;
   }
   .boton {
     display: none;
@@ -934,6 +1353,7 @@ img {
   .menu ul > a li {
     border: 1px solid #202020;
     border-radius: 5px;
+    margin-top: 1rem;
   }
   .menu.open {
     -webkit-transform: translateY(0);
@@ -942,18 +1362,58 @@ img {
   .menu.open ul {
     padding: 0.5rem;
   }
-  nav {
-    padding-top: 9vh;
-  }
-  fieldset {
-    height: 11vh;
-    margin: 0 8rem;
-  }
   .pikachu {
     -webkit-animation: pikachu-m 3s  ease-in-out;
             animation: pikachu-m 3s  ease-in-out;
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
+  }
+  .bulbasaurCharmander {
+    position: relative;
+    left: -33%;
+    height: 20vh;
+    width: 96vw;
+    margin-top: 9vh;
+    background-image: url("../images/bulbasaurCharmander.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .squirtlePikachu {
+    position: relative;
+    top: -29vh;
+    right: -33%;
+    height: 20vh;
+    width: 96vw;
+    margin-top: 9vh;
+    background-image: url("../images/squirtlePikachu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .home__list {
+    padding: 0 5rem;
+  }
+  .about__text {
+    padding: 0 2rem;
+  }
+  .about__text__part {
+    padding: 0 4rem;
+  }
+  .about__text__part h3 {
+    font-size: 1.4em;
+  }
+  .about__text__part p {
+    padding: 0.5rem 1.5rem;
+    text-align: justify;
+  }
+  .contenedor {
+    width: 90vw;
+    height: 35vh;
+    padding: 1rem 2rem;
+  }
+  table caption {
+    text-align: center;
   }
 }
 
@@ -964,10 +1424,7 @@ img {
   }
   .language {
     font-size: 1.1em;
-  }
-  fieldset {
-    height: 11vh;
-    margin: 0 12rem;
+    top: 0.5rem;
   }
   .pikachu {
     -webkit-animation: pikachu-l 3s  ease-in-out;
@@ -975,14 +1432,57 @@ img {
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
   }
+  .home__title {
+    font-size: 2.4em;
+  }
+  .home__p {
+    font-size: 1.2em;
+  }
+  .home__list {
+    font-size: 1.1em;
+    padding: 0 8rem;
+  }
+  .about__text {
+    padding: 0 3rem;
+  }
+  .about__text__part {
+    padding: 0 5rem;
+  }
+  .about__text__part h3 {
+    font-size: 1.6em;
+  }
+  .about__text__part p {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1em;
+    text-align: justify;
+  }
+  .contenedor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90vw;
+    height: 30vh;
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  table {
+    margin: 0;
+    padding: 0;
+  }
+  table caption {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /*tamaño xl 1500<width*/
 @media screen and (min-width: 1500px) {
-  fieldset {
-    height: 11vh;
-    margin: 0 16rem;
-  }
   .buscar__boton {
     font-size: 1.2em;
   }
@@ -994,6 +1494,24 @@ img {
             animation: pikachu-xl 3s  ease-in-out;
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
+  }
+  .home__title {
+    font-size: 2.7em;
+  }
+  .home__p {
+    font-size: 1.4em;
+  }
+  .home__list {
+    font-size: 1.2em;
+    padding: 0 12rem;
+  }
+  .about__text__part p {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2em;
+    text-align: justify;
+  }
+  .contenedor {
+    width: 95vw;
   }
 }
 /*# sourceMappingURL=main.css.map */

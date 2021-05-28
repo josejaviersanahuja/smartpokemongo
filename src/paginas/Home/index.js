@@ -9,9 +9,11 @@ const poliglota = {
     'german':<HomeD/>
 }
 
-export default function index({language}) {
+export default function Home({language}) {
+  
     
-    return (
-        poliglota[language]
+    return (<>
+        {poliglota[language]}
+        </>
     )
 }

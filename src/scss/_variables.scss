@@ -152,6 +152,15 @@ $primarylight: #0BE6C5;
         transform: translateX(-105vw);
     }
 }
+
+@keyframes footer {
+    0% {
+        visibility:visible ;
+     }
+    100% {
+        visibility: hidden;
+    }
+}
 /*Creando las funciones de responsiveness*/
 
 @mixin media-s {

@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Stats({datapokByform}) {
     return (
-        <div>
-            <h4>Estadisticas básicas</h4>
+            <fieldset className="stats">
+            <legend>Estadisticas básicas</legend>
             <ul>
                {<li>Tipo: {datapokByform.type.map(e=> e + " ")}</li>}
                 <li>Forma: {datapokByform.form} </li>
@@ -11,8 +11,6 @@ export default function Stats({datapokByform}) {
                 <li>Defensa: {datapokByform.base_defense} </li>
                 <li>Resistencia: {datapokByform.base_stamina} </li>
             </ul>
-            
-            
-        </div>
+            </fieldset>
     )
 }

@@ -4,10 +4,9 @@ import LegendInputEs from './BusquedaEs/LegendInputEs'
 import LegendInputEn from './BusquedaEn/LegendInputEn'
 import LegendInputD from './BusquedaD/LegendInputD'
 
-export default function Busqueda({language}) {
+export default function Busqueda({language, menuOpen}) {
     const {arrayBusqueda, keyword, handleSubmit, handleChange, setkeyword}= useBusqueda()
-
-
+  
     const poliglota = {
         'english':<LegendInputEn keyword={keyword} handleChange={handleChange}/>,
         'spanish':<LegendInputEs keyword={keyword} handleChange={handleChange}/>,
@@ -16,7 +15,7 @@ export default function Busqueda({language}) {
     return (
         <>
         <form id="buscar_pokemon " onSubmit={handleSubmit}>
-            <fieldset>
+            <fieldset className="buscar__fieldset">
             {poliglota[language]}
               
               {arrayBusqueda.length !== 0 ? <datalist id="pokemons" form="buscar_pokemon" name="filtrodebusqueda" >

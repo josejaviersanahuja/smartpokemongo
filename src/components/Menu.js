@@ -2,13 +2,14 @@ import React from 'react'
 import ListaD from './MenuD/ListaD'
 import ListaEs from './MenuEs/ListaEs'
 import ListaEn from './MenuEn/ListaEn'
-import useMenuClases from '../hooks/useMenuClases'
+//import useMenuClases from '../hooks/useMenuClases'
+//import LanguageContext from '../context/LanguageContext'
 
 
 
-export default function Menu({ language, setlanguage }) {
+export default function Menu({ language,  handleClick, handleChange, claseBoton, claseMenu }) {
 
-    const {handleClick, handleChange, claseBoton, claseMenu} = useMenuClases({setlanguage})
+   // const {handleClick, handleChange, claseBoton, claseMenu} = useContext(LanguageContext)
     
     const poliglota = {
         'english': <ListaEn handleClick={handleClick} />,
@@ -16,7 +17,7 @@ export default function Menu({ language, setlanguage }) {
         'german': <ListaD handleClick={handleClick}/>
     }
 
-    return (<>
+    return (<div className="header">
         <div className={claseBoton} onClick={handleClick}>
                 <div className="arrow first"></div>
                 <div className="arrow second"></div>
@@ -34,5 +35,5 @@ export default function Menu({ language, setlanguage }) {
             <option value="english" >english</option>
             <option value="german">deutsch</option>
         </select>
-    </>)
+    </div>)
 }

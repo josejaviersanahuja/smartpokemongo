@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import pokemons from '../../../data/pokemons.json'
+import pokemons from '../../data/pokemons.json'
 export default function Paging({pag}) {
     let listaPokemon=[]
   if (pag<43){
@@ -24,7 +24,7 @@ export default function Paging({pag}) {
         <ol>
         {listaPokemon.map(e => (
         <li key={e.id}>
-          <span>{e.id}.</span> 
+          <span>ID: {e.id}.</span> 
           <Link to={`/pokemon/${e.id}`}>
             <img  
                 src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${numberToString(e.id)}.png`} 

@@ -2,14 +2,44 @@
 /*Ahora si el movil es de gama media tamaño s 400<width<768*/
 @include media-s {
     // nothing on spinner/menu/select
-    fieldset {
-        height: 11vh;
-        margin:0 2rem;
-    }
+    
     .pikachu {
         animation: pikachu-s 3s  ease-in-out;
         animation-delay: 1s;
     }
+    .home {
+        overflow-y: visible;
+        &__title{
+            font-size: 2.2em;
+        }
+        &__p{
+            font-size: 1.1em;
+        }
+        &__list{
+            font-size: 1em;
+            padding:0 3rem;
+        }
+    }
+    .about {
+        overflow:visible;
+        &__text{
+            padding:1rem;
+            &__part{
+                padding: 0 1rem;
+                h3 {
+                    font-size: 1.4em;
+                }
+                p {
+                    padding:0.5rem 1rem;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+    .contenedor{
+        height: 30vh;
+    }
+    
 }
 
 /*tamaño m 768<width<1080*/
@@ -18,12 +48,10 @@
     .language{
        padding: 4px 8px;
        font-size: 0.85em;
-       top: 1.1rem;
+       top: 0.6rem;
        right: 2rem;
     }
-    header {
-        height: 8vh;
-    }
+    
     .boton {
         display: none;
     }
@@ -44,6 +72,7 @@
                 & li{
                     border: 1px solid $primarydark;
                     border-radius: 5px;
+                    margin-top: 1rem;
                     //border-top-right-radius: %;
                 }
             }
@@ -56,18 +85,64 @@
         } 
     }
 
-    nav {
-        padding-top: 9vh;
-    }
-
-    fieldset {
-        height: 11vh;
-        margin:0 8rem;
-    }
     .pikachu {
         animation: pikachu-m 3s  ease-in-out;
         animation-delay: 1s;
     }
+    .bulbasaurCharmander {
+        position: relative;
+        left: -33%;
+        height: 20vh;
+        width: 96vw;
+        margin-top: 9vh;
+        background-image: url('../images/bulbasaurCharmander.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .squirtlePikachu {
+        position: relative;
+        top:-29vh;
+        right: -33%;
+        height: 20vh;
+        width: 96vw;
+        margin-top: 9vh;
+        background-image: url('../images/squirtlePikachu.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .home {
+        &__list{
+            padding:0 5rem;
+        }
+    }
+    .about {
+        &__text{
+            padding:0 2rem;
+            &__part{
+                padding: 0 4rem;
+                h3 {
+                    font-size: 1.4em;
+                }
+                p {
+                    padding:0.5rem 1.5rem;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+    .contenedor{
+        width: 90vw;
+        height: 35vh;
+        padding: 1rem 2rem; 
+    }
+    table {
+        caption{
+         text-align: center;
+        }
+    }
+   
 }
 /*tamaño l 1080<width<1500*/
 @include media-l {
@@ -79,23 +154,63 @@
     }
     .language {
         font-size: 1.1em;
+        top:0.5rem;
     }
-    fieldset {
-        height: 11vh;
-        margin:0 12rem;
-    }
+   
     .pikachu {
         animation: pikachu-l 3s  ease-in-out;
         animation-delay: 1s;
+    }
+    .home {
+        &__title{
+            font-size: 2.4em;
+        }
+        &__p{
+            font-size: 1.2em;
+        }
+        &__list{
+            font-size: 1.1em;
+            padding:0 8rem;
+        }
+    }
+    .about {
+        &__text{
+            padding:0 3rem;
+            &__part{
+                padding: 0 5rem;
+                h3 {
+                    font-size: 1.6em;
+                }
+                p {
+                    padding:0.5rem 1.5rem;
+                    font-size: 1.1em;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+    .contenedor{
+        display: flex;
+        width: 90vw;
+        height: 30vh;
+        padding:0;
+        justify-content: center;
+        align-items: center;
+    }
+    table {
+        margin: 0;
+        padding:0 ;
+        caption{
+         text-align: center;
+         margin: 0;
+        padding:0 ;
+        }
     }
 }
 /*tamaño xl 1500<width*/
 @include media-xl {
     //nothing on spinner/ select
-    fieldset {
-        height: 11vh;
-        margin:0 16rem;
-    }
+   
     .buscar__boton{
             font-size: 1.2em;
         }
@@ -105,5 +220,31 @@
     .pikachu {
         animation: pikachu-xl 3s  ease-in-out;
         animation-delay: 1s;
+    }
+    .home {
+        &__title{
+            font-size: 2.7em;
+        }
+        &__p{
+            font-size: 1.4em;
+        }
+        &__list{
+            font-size: 1.2em;
+            padding:0 12rem;
+        }
+    }
+    .about {
+        &__text{
+            &__part{
+                p {
+                    padding:0.5rem 1.5rem;
+                    font-size: 1.2em;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+    .contenedor{
+        width: 95vw;
     }
 }

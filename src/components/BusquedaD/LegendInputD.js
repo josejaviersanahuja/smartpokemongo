@@ -10,8 +10,9 @@ export default function LegendInputD({keyword, handleChange}) {
                   onChange={handleChange}
                   value={keyword}
                   list="pokemons"
+                  className="buscar__text"
               />  
-              <input type="submit" value="Suchen" />
+              <input type="submit" value="Suchen" className="buscar__boton"/>
         </>
     )
 }

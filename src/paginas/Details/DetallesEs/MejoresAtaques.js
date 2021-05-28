@@ -22,17 +22,19 @@ export default function MejoresAtaques({datapokByform}) {
     const { mejorComboPoder, mejorComboRapido}= useMejoresAtaques({fast_moves:datapokByform.fast_moves, charged_moves:datapokByform.charged_moves})
 
     return (
-        <table>
+        <div className="contenedor">
+        <div className="details__combos">
+        <table >
             <caption> Los mejores ataques: </caption>
             {mejorComboPoder && mejorComboRapido?
             <thead>
-                <tr>
-                    <th></th>
-                    <th>Nombre del ataque</th>
-                    <th>Poder del ataque</th>
-                    <th>Tiempo de ataque / Tiempo de Carga</th>
-                    <th>Golpes por segundo/Golpes antes de carga</th>
-                    <th>Tipo</th>
+                <tr >
+                    <th className="tabla__fila1"></th>
+                    <th className="tabla__fila1">Nombre del ataque</th>
+                    <th className="tabla__fila1" >Poder del ataque</th>
+                    <th className="tabla__fila1">Tiempo de ataque / Tiempo de Carga</th>
+                    <th className="tabla__fila1">Golpes por segundo/Golpes antes de carga</th>
+                    <th className="tabla__fila1">Tipo</th>
                 </tr>
             </thead> : null }
             <tbody>    
@@ -40,5 +42,7 @@ export default function MejoresAtaques({datapokByform}) {
                 {mejorComboPoder? <TablaMejorAtaqueCargado mejorComboPoder={mejorComboPoder} />: null}
             </tbody>
         </table>
+    </div>
+    </div>
     )
 }

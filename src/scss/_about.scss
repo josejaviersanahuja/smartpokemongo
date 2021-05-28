@@ -1,0 +1,28 @@
+.about {
+    height: 55vh;
+    padding: 1rem;
+    overflow-y: scroll;
+   
+    &__text{
+        padding:0.5rem;
+        &__part{
+            h3 {
+                font-size: 1.4em;
+            }
+            p {
+                padding:0.5rem;
+                a{
+                    color: $primarylight;
+                    padding: 0 1rem;
+                    transition:all;
+                    transition-duration: 0.5s;
+                    transition-timing-function: ease-in-out;
+                    &:hover {
+                        color: lighten($color: $primarylight, $amount: 15%);
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+    }
+}

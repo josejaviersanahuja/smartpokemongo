@@ -34,7 +34,7 @@
             border-right: 77px solid red;
             border-left: 77px solid transparent;
             border-bottom: 77px solid transparent;
-            animation: spin 2s infinite ease-in-out;
+            animation: spinSpinner 2s infinite ease-in-out;
             animation-delay: 0.5s;
         }
        
@@ -43,14 +43,14 @@
             border-bottom: 77px solid white;
             border-top: 77px solid transparent;
             border-right: 77px solid transparent;
-            animation: spin 2s infinite ease-in-out;
+            animation: spinSpinner 2s infinite ease-in-out;
             animation-delay: 0.5s;
         }
     }
     
 }
 
-@keyframes spin {
+@keyframes spinSpinner {
     0% { transform: rotate(-45deg);}
     100% { transform: rotate( 315deg);} 
 }
