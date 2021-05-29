@@ -37,9 +37,19 @@
         }
     }
     .contenedor{
-        height: 30vh;
+        height: 35vh;
     }
-    
+    .stats {
+        margin: 0 20%;
+    }
+    .attackselection {
+        fieldset {
+            margin: 0 20%;
+        }
+    }
+    .buscar__fieldset{
+        margin: 0 15%;
+    }
 }
 
 /*tamaño m 768<width<1080*/
@@ -89,29 +99,7 @@
         animation: pikachu-m 3s  ease-in-out;
         animation-delay: 1s;
     }
-    .bulbasaurCharmander {
-        position: relative;
-        left: -33%;
-        height: 20vh;
-        width: 96vw;
-        margin-top: 9vh;
-        background-image: url('../images/bulbasaurCharmander.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    .squirtlePikachu {
-        position: relative;
-        top:-29vh;
-        right: -33%;
-        height: 20vh;
-        width: 96vw;
-        margin-top: 9vh;
-        background-image: url('../images/squirtlePikachu.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+   
     .home {
         &__list{
             padding:0 5rem;
@@ -132,6 +120,29 @@
             }
         }
     }
+    .bulbasaurCharmander {
+        position: relative;
+        left: 0;
+        height: 20vh;
+        width: 35vw;
+        margin-top: 9vh;
+        background-image: url('../images/bulbasaurCharmander.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .squirtlePikachu {
+        position: relative;
+        top:-29vh;
+        right: -65%;
+        height: 20vh;
+        width: 35vw;
+        margin-top: 9vh;
+        background-image: url('../images/squirtlePikachu.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
     .contenedor{
         width: 90vw;
         height: 35vh;
@@ -141,6 +152,17 @@
         caption{
          text-align: center;
         }
+    }
+    .stats {
+        margin: 0 25%;
+    }
+    .attackselection {
+        fieldset {
+            margin: 0 25%;
+        }
+    } 
+    .buscar__fieldset{
+        margin: 0 20%;
     }
    
 }
@@ -161,6 +183,7 @@
         animation: pikachu-l 3s  ease-in-out;
         animation-delay: 1s;
     }
+    
     .home {
         &__title{
             font-size: 2.4em;
@@ -196,6 +219,10 @@
         padding:0;
         justify-content: center;
         align-items: center;
+        transform: translateY(-8rem);
+    }
+    .caja__translate{
+        transform: translateY(0rem);
     }
     table {
         margin: 0;
@@ -206,6 +233,38 @@
         padding:0 ;
         }
     }
+    .stats {
+        margin: 0 30%;
+    }
+    .attackselection {
+        fieldset {
+            margin: 0 30%;
+        }
+        transform: translate(25%, -90%);
+    }
+    .buscar__fieldset{
+        margin: 0 25%;
+    }
+
+    .detalles__basicos {
+        transform: translate(-25%, 0);
+    }
+    .details__p {
+        transform: translateY(-8rem);
+    }
+    .details__eachattacks{
+        &.rapido{
+            transform: translate(-25vw,-9rem);
+        }
+        &.cargado {
+            transform: translate(25vw, -15rem);
+        }
+    }
+     .details {
+        height: 58vh;
+        margin: 1rem 0 0 2rem;
+    } 
+   
 }
 /*tamaño xl 1500<width*/
 @include media-xl {
@@ -246,5 +305,16 @@
     }
     .contenedor{
         width: 95vw;
+    }
+    .stats {
+        margin: 0 35%;
+    }
+    .attackselection {
+        fieldset {
+            margin: 0 35%;
+        }
+    }
+    .buscar__fieldset{
+        margin: 0 35%;
     }
 }

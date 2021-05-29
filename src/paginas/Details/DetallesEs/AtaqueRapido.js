@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AtaqueRapido({fastAttack}) {
     return (
-        <table>
+        <table className="details__eachattacks rapido">
             <caption>Ataque Rápido</caption>
             <tbody>
             <tr>

@@ -5,7 +5,7 @@ import DetallesD from './DetallesD'
 
 
 
-export default function index({id, datapok, loading,language }) {
+export default function Details({id, datapok, loading,language }) {
     
     const poliglota = {
         'english':<DetallesEn id={id} datapok={datapok} loading={loading} />,

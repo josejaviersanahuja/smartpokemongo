@@ -502,6 +502,11 @@
 
 .details {
   margin-top: 1rem;
+  border: 8px double #0BE6C5;
+  border-radius: 10px;
+  height: 55vh;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .details h3 {
@@ -557,16 +562,22 @@
   padding: 0.1rem;
 }
 
-.attackselection p {
+.details__p {
   margin: 0.5rem 1rem;
   border-radius: 10px;
   background-color: #0BE6C5;
   color: #202020;
 }
 
+.details__eachattacks {
+  width: auto;
+  height: 8vh;
+  margin: 0 auto;
+}
+
 .contenedor {
   width: 85vw;
-  height: 35vh;
+  height: 42vh;
   overflow-y: hidden;
   overflow-x: auto;
   border: 6px double #0BE6C5;
@@ -1309,7 +1320,16 @@ img {
     text-align: justify;
   }
   .contenedor {
-    height: 30vh;
+    height: 35vh;
+  }
+  .stats {
+    margin: 0 20%;
+  }
+  .attackselection fieldset {
+    margin: 0 20%;
+  }
+  .buscar__fieldset {
+    margin: 0 15%;
   }
 }
 
@@ -1368,29 +1388,6 @@ img {
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
   }
-  .bulbasaurCharmander {
-    position: relative;
-    left: -33%;
-    height: 20vh;
-    width: 96vw;
-    margin-top: 9vh;
-    background-image: url("../images/bulbasaurCharmander.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .squirtlePikachu {
-    position: relative;
-    top: -29vh;
-    right: -33%;
-    height: 20vh;
-    width: 96vw;
-    margin-top: 9vh;
-    background-image: url("../images/squirtlePikachu.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
   .home__list {
     padding: 0 5rem;
   }
@@ -1407,6 +1404,29 @@ img {
     padding: 0.5rem 1.5rem;
     text-align: justify;
   }
+  .bulbasaurCharmander {
+    position: relative;
+    left: 0;
+    height: 20vh;
+    width: 35vw;
+    margin-top: 9vh;
+    background-image: url("../images/bulbasaurCharmander.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .squirtlePikachu {
+    position: relative;
+    top: -29vh;
+    right: -65%;
+    height: 20vh;
+    width: 35vw;
+    margin-top: 9vh;
+    background-image: url("../images/squirtlePikachu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   .contenedor {
     width: 90vw;
     height: 35vh;
@@ -1414,6 +1434,15 @@ img {
   }
   table caption {
     text-align: center;
+  }
+  .stats {
+    margin: 0 25%;
+  }
+  .attackselection fieldset {
+    margin: 0 25%;
+  }
+  .buscar__fieldset {
+    margin: 0 20%;
   }
 }
 
@@ -1469,6 +1498,12 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-transform: translateY(-8rem);
+            transform: translateY(-8rem);
+  }
+  .caja__translate {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
   }
   table {
     margin: 0;
@@ -1478,6 +1513,39 @@ img {
     text-align: center;
     margin: 0;
     padding: 0;
+  }
+  .stats {
+    margin: 0 30%;
+  }
+  .attackselection {
+    -webkit-transform: translate(25%, -90%);
+            transform: translate(25%, -90%);
+  }
+  .attackselection fieldset {
+    margin: 0 30%;
+  }
+  .buscar__fieldset {
+    margin: 0 25%;
+  }
+  .detalles__basicos {
+    -webkit-transform: translate(-25%, 0);
+            transform: translate(-25%, 0);
+  }
+  .details__p {
+    -webkit-transform: translateY(-8rem);
+            transform: translateY(-8rem);
+  }
+  .details__eachattacks.rapido {
+    -webkit-transform: translate(-25vw, -9rem);
+            transform: translate(-25vw, -9rem);
+  }
+  .details__eachattacks.cargado {
+    -webkit-transform: translate(25vw, -15rem);
+            transform: translate(25vw, -15rem);
+  }
+  .details {
+    height: 58vh;
+    margin: 1rem 0 0 2rem;
   }
 }
 
@@ -1512,6 +1580,15 @@ img {
   }
   .contenedor {
     width: 95vw;
+  }
+  .stats {
+    margin: 0 35%;
+  }
+  .attackselection fieldset {
+    margin: 0 35%;
+  }
+  .buscar__fieldset {
+    margin: 0 35%;
   }
 }
 /*# sourceMappingURL=main.css.map */

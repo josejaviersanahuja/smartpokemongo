@@ -5,7 +5,7 @@ export default function SelectFastMove({ fastCheck, handleChangeFast }) {
         
         <form onChange={handleChangeFast}>
             <fieldset>
-            <legend>Fast moves</legend>
+            <legend>Movimientos rápidos</legend>
                 <ul>
                 {Object.keys(fastCheck).map(e=> <li key={e}>{e}:  <input name="fast" type="radio" value={e}/></li>)}
                 </ul>

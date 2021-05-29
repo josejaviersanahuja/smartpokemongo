@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AtaqueCargado({chargedAttack}) {
     return (
-        <table>
+        <table className="details__eachattacks cargado">
             <caption>Charged attack</caption>
             <tbody>
             <tr>

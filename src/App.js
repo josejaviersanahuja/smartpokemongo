@@ -11,14 +11,10 @@ import About from './paginas/About'
 import LanguageContext from './context/LanguageContext'
 import AreYouLost from './paginas/AreYouLost'
 import Animacion from "./components/Animacion";
-//import useMenuClases from './hooks/useMenuClases'
-//q2import Spinner from "./components/Spinner";
 
 function App() {
   const {language, setlanguage,handleClick, handleChange, claseBoton, claseMenu, menuOpen }= useContext(LanguageContext)
-  //const {openMenu} = useMenuClases({setlanguage})
-  //const {handleClick, handleChange, claseBoton, claseMenu} = useContext(LanguageContext)
-  console.log(menuOpen);
+  
   return (
     <>
       
@@ -64,6 +60,7 @@ function Child({language}) {
   let {id}=useParams()
   const [datapok, setdatapok] = useState([])
     const [loading, setloading] = useState(true)
+    
     useEffect(() => {
         getAPI({id:id})
             .then(pok => {

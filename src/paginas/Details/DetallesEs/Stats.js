@@ -5,7 +5,7 @@ export default function Stats({datapokByform}) {
             <fieldset className="stats">
             <legend>Estadisticas básicas</legend>
             <ul>
-               {<li>Tipo: {datapokByform.type.map(e=> e + " ")}</li>}
+               {<li>Tipo: {datapokByform.type.map(e=> e + " ")} </li>}
                 <li>Forma: {datapokByform.form} </li>
                 <li>Ataque: {datapokByform.base_attack} </li>
                 <li>Defensa: {datapokByform.base_defense} </li>

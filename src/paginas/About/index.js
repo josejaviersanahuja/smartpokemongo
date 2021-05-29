@@ -2,6 +2,7 @@ import React from 'react'
 import AboutEs from './AboutEs'
 import AboutEn from './AboutEn'
 import AboutD from './AboutD'
+import useSEO from '../../hooks/useSEO'
 
 const poliglota = {
     'english':<AboutEn/>,
@@ -9,7 +10,9 @@ const poliglota = {
     'german':<AboutD/>
 }
 
-export default function index({language}) {
+export default function About({language}) {
+    const title=`An open source code || by ZitrojjDev`
+    useSEO({title})
     
     return (
         poliglota[language]

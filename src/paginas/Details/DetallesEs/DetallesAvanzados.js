@@ -16,8 +16,10 @@ export default function DetallesAvanzados({ datapokByform }) {
             <div className="attackselection">
             <SelectFastMove handleChangeFast={handleChangeFast} fastCheck={fastCheck} />
             <SelectChargedMove handleChangeCharged={handleChangeCharged} chargedCheck={chargedCheck} />
-            {areBothSelected ? <DetallesAtaques fastTrue={fastTrue} chargedTrue={chargedTrue} /> : isSmeargle ? <p>Smeargle no tiene ataques</p> : <p> ¿Quieres revisar cada ataque uno por uno? selecciona los ataques que quieres combinar</p>}
             </div>
+            <div className="caja__translate">
+           {areBothSelected ? <DetallesAtaques fastTrue={fastTrue} chargedTrue={chargedTrue} /> : isSmeargle ? <p className="details__p">Smeargle no tiene ataques</p> : <p className="details__p"> ¿Quieres revisar cada ataque uno por uno? selecciona los ataques que quieres combinar</p>}
+           </div>
             <MejoresAtaques datapokByform={datapokByform} />
         </>
     )

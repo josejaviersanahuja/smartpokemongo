@@ -1,13 +1,13 @@
 import React from 'react'
-import Spinner from '../../../components/Spinner'
 import DetallesBasicos from './DetallesBasicos'
+import Spinner from '../../../components/Spinner'
 
 export default function index({id, datapok, loading}) {
     
     return (<>
-        <section>
-             <h2>Pokemon id {id}</h2>
+        <div className="details">
+             <h1 className="home__title">Pokemon id {id}</h1>
              {loading? <Spinner/>: <DetallesBasicos datapok={datapok} />}
-         </section>
+         </div>
    </>)
 }
