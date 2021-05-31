@@ -34,6 +34,7 @@ export default function useMejoresAtaques({fast_moves, charged_moves}) {
 
     const allCombos = useCallback(
         () =>{
+          //  if(fast_moves.length>0){
             let arrayDeFastMoves =  fast_moves.map(e=> allFast.find(ataque => ataque.name === e) )
            let arrayDeChargedMoves= charged_moves.map(e=> allCharged.find(ataque=> ataque.name === e))
   
@@ -60,6 +61,9 @@ export default function useMejoresAtaques({fast_moves, charged_moves}) {
           });
          
           return arrayAllCombos
+      //  } else {
+        //    return []
+        //}
       } ,
         [allCharged,allFast,fast_moves,charged_moves],
     )
@@ -97,5 +101,5 @@ export default function useMejoresAtaques({fast_moves, charged_moves}) {
     
      
 
-        return { mejorComboPoder, mejorComboRapido}
+        return { mejorComboPoder, mejorComboRapido, allCombos }
 }

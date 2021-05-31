@@ -11,6 +11,7 @@ import About from './paginas/About'
 import LanguageContext from './context/LanguageContext'
 import AreYouLost from './paginas/AreYouLost'
 import Animacion from "./components/Animacion";
+import Apicall from "./paginas/Apicall";
 
 function App() {
   const {language, setlanguage,handleClick, handleChange, claseBoton, claseMenu, menuOpen }= useContext(LanguageContext)
@@ -42,6 +43,7 @@ function App() {
          <Route path="/page/:pag" children={<Page language={language} />}/> 
           <Route path="/pokemon/:id" language={language} children={<Child language={language} />}></Route>
          <Route path="/about" language={language} children={<About language={language} />}/>
+         <Route path="/apicall" language={language} children={<Apicall language={language} />}/>
           {<Route language={language} children={<AreYouLost language={language} />}/>}
         </Switch>
       <footer>
