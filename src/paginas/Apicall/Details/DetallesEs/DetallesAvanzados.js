@@ -6,7 +6,7 @@ import DetallesAtaques from './DetallesAtaques'
 import MejoresAtaques from './MejoresAtaques'
 import PostSmeargle from '../../PostSmeargle'
 
-export default function DetallesAvanzados({ datapokByform, dataToPost, datapok}) {
+export default function DetallesAvanzados({ datapokByform, datapok}) {
     const { fastCheck, chargedCheck, handleChangeFast, handleChangeCharged, findTrueElement } = useDetails({ datapokByform })
     const { fastTrue, chargedTrue } = findTrueElement()
     const isSmeargle = datapokByform.id === 235
@@ -22,7 +22,7 @@ export default function DetallesAvanzados({ datapokByform, dataToPost, datapok})
             <div className="caja__translate">
            {areBothSelected ? <DetallesAtaques fastTrue={fastTrue} chargedTrue={chargedTrue} /> : isSmeargle ? <PostSmeargle datapokByform={datapokByform} />: <p className="details__p"> ¿Quieres revisar cada ataque uno por uno? selecciona los ataques que quieres combinar</p>}
            </div>
-            <MejoresAtaques datapokByform={datapokByform} dataToPost={dataToPost} datapok={datapok}/>
+            <MejoresAtaques datapokByform={datapokByform} datapok={datapok}/>
         </>
     )
 }

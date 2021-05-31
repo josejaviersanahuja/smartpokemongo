@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import useMejoresAtaques from '../../../../hooks/useMejoresAtaques'
 import TablaMejorAtaqueCargado from './TablaMejorAtaqueCargado'
 import TablaMejorAtaqueRapido from './TablaMejorAtaqueRapido'
@@ -18,10 +18,10 @@ mejorCombo={
     typecharged: "Fire"
 }
 */
-export default function MejoresAtaques({ datapokByform, dataToPost, datapok }) {
+export default function MejoresAtaques({ datapokByform, datapok }) {
     const { mejorComboPoder, mejorComboRapido, allCombos } = useMejoresAtaques({ fast_moves: datapokByform.fast_moves, charged_moves: datapokByform.charged_moves })
-    /*
-    dataToPost={
+    
+    const dataToPostInicial={
         id:datapok[0].id,
         name:datapok[0].name,
         base_attack:datapok[0].base_attack,
@@ -30,41 +30,32 @@ export default function MejoresAtaques({ datapokByform, dataToPost, datapok }) {
         forms:[],
         nodata:false
     }
-    */
+    const dataToPost = useRef(dataToPostInicial)
     const handlePush = () => {
-        let detailsByForm = [{
+        let detailsByForm = {
             form: datapokByform.form,
             fast_moves: datapokByform.fast_moves,
             charged_moves: datapokByform.charged_moves,
             all_combos: allCombos(),
             fastest_combo: mejorComboRapido,
             power_combo: mejorComboPoder
-        }]
-        let newForms = dataToPost.forms.map(e=>e)
+        }
+        dataToPost.current.forms.push(detailsByForm)
         
-        dataToPost.forms=newForms.concat(detailsByForm) // no consigio que el array crezca 
-        console.log(dataToPost, '--push');
+        console.log(dataToPost.current, '--push');
     }
 
     const handleReset = () => {
-        dataToPost = {
-            id: datapok[0].id,
-            name: datapok[0].name,
-            base_attack: datapok[0].base_attack,
-            base_defense: datapok[0].base_defense,
-            base_stamina: datapok[0].base_stamina,
-            forms: [],
-            nodata:false
-        }
-        console.log(dataToPost, '--reset');
+        dataToPost.current = dataToPostInicial
+        console.log(dataToPost.current, '--reset');
     }
 
     const handlePost = () => {
-        console.log(dataToPost, '--intro');
+        console.log(dataToPost.current, '--intro');
         let myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
-        let raw = JSON.stringify(dataToPost);
+        let raw = JSON.stringify(dataToPost.current);
         console.log(raw);
         let requestOptions = {
             method: 'POST',
